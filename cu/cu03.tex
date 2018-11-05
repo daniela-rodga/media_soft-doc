@@ -1,0 +1,62 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU03}{Visualización de los datos del empleado}{
+	El Gerente de Recursos Humanos y/o un Agente de Recursos Humanos requiere consultar en el sistema los datos de un empleado (activo o inactivo).
+}
+    \UCitem{Versión}{\color{Gray}0.1}
+    \UCitem{Autor}{\color{Gray}Daniela Rodríguez García}
+    \UCitem{Supervisa}{\color{Gray}Joel Santillán Yáñez}
+    \UCitem{Actor}{\hyperlink{Gerente de Recursos Humanos}{Gerente de Recursos Humanos, Agente de Recursos Humanos}}
+    \UCitem{Propósito}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos visualice correctamente los datos asociados a un empleado.}
+    \UCitem{Entradas}{Identificador de empleado.}
+    \UCitem{Origen}{Teclado}
+    \UCitem{Salidas}{Mensaje de Notificación, visualización de datos del empleado.}
+    \UCitem{Destino}{Pantalla.}
+    \UCitem{Precondiciones}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos y el empleado a visualizar sus datos deben estar registrado en el sistema.}
+    \UCitem{Postcondiciones}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos podrá visualizar los datos de un empleado específico.}
+    \UCitem{Errores}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos ingresa un identificador erróneo.}
+    \UCitem{Tipo}{Caso de uso primario}
+    \UCitem{Observaciones}{}
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{Principal}
+\UCpaso[\UCactor] Introduce su identificador de Usuario y Contraseña en el sistema vía la  \IUref{IU23}{Pantalla de Control de Acceso}\label{CU17Login}.
+
+\UCpaso[\UCactor] Confirma la operación presionando el botón \IUbutton{Entrar}.
+
+\UCpaso Visualiza la \IUref{IU09}{Administración de Recursos Humanos} Administración de Recursos Humanos
+
+\UCpaso[\UCactor] Ingresa al Menu de Empleados.
+
+\UCpaso[\UCactor] Oprime la opción \IUbutton{Consulta de empleados}.
+
+\UCpaso[\UCactor] Ingresa el identificador correspondiente del empleado a consultar.
+
+\UCpaso Se despliega la \IUref{IU13}{Información del empleado} Información del empleado..
+
+\UCpaso [\UCactor] Regresa a la \IUref{IU09}{Administración de Recursos Humanos} Administración de Recursos Humanos.
+
+
+\end{UCtrayectoria}
+
+%--------------------------------------		
+\begin{UCtrayectoriaA}{A}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos ingresa un identificador de empleado erróneo.}
+\UCpaso [\UCactor] Ingresa un identificador de empleado erróneo.
+\UCpaso Se despliega la \IUref{IU14}{Identificador de empleado erróneo} Identificador de empleado erróneo.
+\end{UCtrayectoriaA}
+
+%--------------------------------------
+% Puntos de extensión
+
+
+%-------------------------------------- TERMINA descripción del caso de uso.

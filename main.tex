@@ -1,58 +1,13 @@
-\documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsfonts}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{multirow}
-\usepackage{array}
-\usepackage{float}
-\usepackage{commath}
-\usepackage[spanish]{babel}
-\usepackage{ragged2e}
-\usepackage{natbib}
-\usepackage{glossaries}
-\usepackage{listings}
-\usepackage{color}
-\usepackage{verbatim}
-\usepackage{tikz}
-\usepackage{pgfgantt}
-\usepackage{fancyhdr}
-\usepackage{url}
-\def\UrlBreaks{\do\/\do-}
-\usepackage{booktabs}
+\documentclass[10pt,oneside,openany]{book}
 \usepackage{longtable}
 \usepackage{siunitx}
 \usepackage{tabularx}
-
-
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\rightmark}
-\rfoot{Página \thepage}
-
-\begin{document}
-
-\begin{titlepage}
-
-\begin{center}
-\begin{figure}
-\begin{minipage}{.22\textwidth}
-  \centering
-  \includegraphics[scale=0.05]{ipn.png}
-\end{minipage}%
-\begin{minipage}{.56\textwidth}
-\begin{center}
-\Large{Instituto Politécnico Nacional}\par
-\vspace{7mm}
-Escuela Superior de Cómputo
-\end{center}
-\end{minipage}%
-\begin{minipage}{.22\textwidth}
-  \centering
-  \includegraphics[scale=0.5]{escom.jpg}
-\end{minipage}
-\end{figure}
+\usepackage{cdtBook}
+\usepackage{usecases}
+\usepackage{booktabs}
+\usepackage{txfonts}
+\usepackage{graphicx}
+\usepackage{float}
 \newcommand{\addfigure}[4]{
         \begin{figure}[htbp!]
             \begin{center}	
@@ -62,83 +17,52 @@ Escuela Superior de Cómputo
             \end{center}
         \end{figure}
   }
-\large{\hspace{1mm}}\par
-\vspace{5mm}
-\large{MEDIA SOFT}\par
-\vspace{30mm}
-\large{\textbf{\textit{SISTEMA DE GESTIÓN PARA LA RENTA DE ESPACIOS PUBLICITARIOS.}}}\par
-\vspace{15mm}
-\vspace {15mm}
-\large{\textbf{Presentan:}}\par
-\vspace {5mm}
-\large{Bravo Torres Alejandro}\par
-\large{Rodríguez García Daniela}\par
-\large{Rojas Calero Kevin}\par
-\large{Santillán Yáñez Joel}\par
-\vspace{10mm}
-\end{center} 
-\end{titlepage}
-\newpage
-\pagenumbering{roman}
+\title{Entregable C2-EP2\bigskip\\SISTEMA PARA LA GESTIÓN DE RENTA DE ESPACIOS PUBLICITARIOS}
+\subtitle{Componente 1 Iteración 1 Especificación del proyecto}
+\author{MEDIA SOFT}
+\organization{Escuela Superior de Cómputo, IPN \\
+    Rodríguez García, Daniela \\
+    Rojas Calero, Kevin \\
+    Santillán Yáñez, Joel \\
+    Bravo Torres, Alejandro \\
+}
+\showInstrucciones
+\date{\color{red}Borrador del 9 de Octubre del 2018 \\(para revisión)}
+%\date{\color{green}Version 1.0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\ThisLRCornerWallPaper{1}{images/bannerAzul}
+\maketitle
+\thispagestyle{empty}
+
+
+\frontmatter
 \tableofcontents
-\newpage
-\pagenumbering{arabic}
-\section{Planteamiento del proyecto}
-\subsection{Resumen}
-Espectaculares S.A. vino a nosotros comentándonos acerca de los ligeros inconvenientes que ya presenta el sistema de administración de recursos empresariales (ERP) que actualmente posee: es insuficiente para la cantidad de procesos que ellos manejan, y varios de éstos ni siquieran son capaces de administrarse vía ERP.
+\listoffigures
+\listoftables
 
-El presente proyecto, se desarrolla en busca de ofrecer un sistema para la correcta gestión de la renta de los espacios publicitarios que ofertan.
+\include{projectCharter}
 
-\section{Especificación de requerimientos}
+\mainmatter
+\LRCornerWallPaper{1}{images/plecaAyD}
 
-\subsection{Requerimientos funcionales del sistema}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{\small
-\begin{longtable}[H]{m{2cm}m{4cm}m{6cm}}
-    \caption{\normalsize{Requerimientos funcionales del sistema}}\\
-    
-    \toprule
-    
-    \centering \textbf{ID} & \centering  \textbf{Nombre} & \centering \small \textbf{Descripción} \tabularnewline
-    \midrule
-    \textit{RF1} & \textbf{Visualización de las coordenadas de los espacios publicitarios} & La aplicación deberá permitir visualizar al cliente la ubicación por coordenadas de cada uno de los espacios publicitarios que posee (mediante un mapa). \tabularnewline
-    \textit{RF2} & \textbf{Visualización de la dirección del espacio publicitario} & La aplicación deberá permitir visualizar la dirección de cada uno de los espacios publicitarios que tiene a su disposición que deberá tener los siguientes campos: código postal, calle, número exterior, colonia, delegación, estado* y referencias. \tabularnewline
-    \textit{RF3} & \textbf{Visualización del estado de renta del espacio publicitario} & La aplicación deberá permitir visualizar  el estado de cada uno de los espacios publicitarios que se ofrecen, que deberán ser los siguientes: ocupado, desocupado. \tabularnewline
-    \textit{RF4} & \textbf{Visualización  del estado de mantenimiento del espacio publicitario} & La aplicación deberá permitir la correcta visualización del estado de mantenimiento del espacio publicitario, que se limitan a: en matenimiento, requiere mantenimiento preventino, requiere mantenimiento correctivo, en buenas condiciones. \tabularnewline
-    \textit{RF5} & \textbf{Visualización del inicio del período de renta} & Deberá ser posible observar la fecha de inicio del período de renta de un espectacular. La fecha tendrá el siguiente formato: día/mes/año. \tabularnewline
-    \textit{RF6} & \textbf{Visualización de término del período de renta} & Deberá ser posible observar la fecha de término del período de renta de un espectacular. La fecha tendrá el siguiente formato: día/mes/año.
-    \tabularnewline
-    \textit{RF7} & \textbf{Visualización del responsable del contrato de renta} & La aplicación deberá otorgar el nombre de la persona encargada del contrato de arrendamiento. \tabularnewline
-    \textit{RF8} & \textbf{Visualización de la categoría a la que pertenece el espacio publicitario} & Deberá ser posible mirar la categoría a la que pertenece el espectacular, pudiendo tratarse de: V.I.P., vía primaria y vía secundaria. \tabularnewline
-    \textit{RF9} & \textbf{Visualización del impacto del espacio publicitario} & La aplicación deberá otorgar números esperados de personas que miran (en promedio y con base a un estudio de mercado previamente realizado y cargado a ella) el espectacular. \tabularnewline
-    \textit{RF10} & \textbf{Alta de un nuevo espacio publicitario} & La aplicación deberá permitir el ingreso de un nuevo espectacular rellenando los campos correspondientes: ubicación en coordenadas, dirección de la ubicación (que abarca código postal, calle, número exterior, colonia, delegación, estado* y referencias), fecha de inicio de contrato de arrendamiento, fecha de término de contrato de arrendamiento, responsable del contrato de arrendamiento, categoría del espectacular, impacto promedio, medio y formato. \tabularnewline
-    \textit{RF11} & \textbf{Cambio a un espacio publicitario} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados (mencionados anteriormente) a un espectacular previamente registrado, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio espectacular u otro). \tabularnewline
-    \textit{RF12} & \textbf{Baja de un espacio publicitario} & La aplicación deberá otorgar la opción de eliminar los campos asociados a un espectacular previamente registrado. \tabularnewline
-    \textit{RF13} & \textbf{Notificación de mantenimiento} & La aplicación deberá enviar un mensaje de correo electrónico, a la dirección asociada al encargado de mantemiento asignado al espectacular que requiere mantenimiento tres días antes de éste se encuentre contemplado a realizarse. \tabularnewline
-    \textit{RF14} & \textbf{Notificación de desmontaje} & La aplicación deberá enviar un mensaje de correo electrónico, a la dirección asociada al encargado de mantemiento asignado al espectacular que va a desmontarse tres días antes de éste se encuentre contemplado a realizarse. \tabularnewline
-    \textit{RF15} & \textbf{Notificación de seguro por vencer} & La aplicación deberá enviar un mensaje de correo electrónico, a la dirección asociada al agente de seguros asignado al espectacular del cual se vencerá el seguro, tres semanas antes de que esto suceda. \tabularnewline
-    \bottomrule
-    
-\end{longtable}
-}
-\newpage
-\subsection{Requerimientos no funcionales del sistema}
+%=========================================================
+\include{1introduccion}
 
-{\small
-\begin{longtable}[H]{m{2cm}m{4cm}m{6cm}}
-    \caption{\normalsize{Requerimientos no funcionales del sistema}}\\
-    
-    \toprule
-    
-    \centering \textbf{ID} & \centering  \textbf{Nombre} & \centering \small \textbf{Descripción} \tabularnewline
-    \midrule
-    \textit{RNF1} & \textbf{Responsiva} & La aplicación deberá ser diseñada para su correcta visualización tanto en navegadores para dispositivos móviles como de escritorio. \tabularnewline
-    \textit{RNF2} & \textbf{Condiciones de acceso} & La aplicación deberá permitir el acceso al usuario, siempre y cuando no se presenten un fallo. \tabularnewline
-    \textit{RNF3} & \textbf{Duración de fallos} & El promedio de tiempo de duración en las fallas que se presenten en la aplicación no podrá ser mayor a 2 horas. \tabularnewline
-    \textit{RNF4} & \textbf{Capacidad de acceso} & La aplicación debe ser capaz de operar adecuadamente con 1,000 usuarios (entre empleados y clientes)) utilizándola a la vez. \tabularnewline
-    \textit{RNF5} & \textbf{Compatibilidad del navegador} & La aplicación deberá ser visualizada correctamente por los siguientes navegadores: Google Chrome, Mozilla Firefoz, Opera y Safari. \tabularnewline
-    \bottomrule
-\end{longtable}
-}
+%=========================================================
+\include{2Glosario}
+
+%=========================================================
+\include{3PropuestaProyecto}
+
+%=========================================================
+\include{4ModeloDinamico}
+
+%=========================================================
+\include{5ModeloDeInteraccion}
 
 \end{document}

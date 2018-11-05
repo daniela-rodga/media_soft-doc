@@ -1,0 +1,69 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+\begin{UseCase}{CU01}{Alta a un nuevo empleado}{
+	El Gerente de Recursos Humanos y/o un Agente de Recursos Humanos requiere dar de alta en el sistema a un empleado recién contratado.
+}
+    \UCitem{Versión}{\color{Gray}0.1}
+    \UCitem{Autor}{\color{Gray}Daniela Rodríguez García}
+    \UCitem{Supervisa}{\color{Gray}Alejandro Bravo Torres}
+    \UCitem{Actor}{\hyperlink{Gerente de Recursos Humanos}{Gerente de Recursos Humanos, Agente de Recursos Humanos}}
+    \UCitem{Propósito}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos pueda ingresar la información de un nuevo empleado.}
+    \UCitem{Entradas}{Nombre completo, dirección, teléfono fijo (opcional), teléfono celular, dirección de correo electrónico, situación, departamento, tipo de empleado.}
+    \UCitem{Origen}{Teclado}
+    \UCitem{Salidas}{Mensaje de Notificación, visualización de datos del empleado.}
+    \UCitem{Destino}{Base de datos.}
+    \UCitem{Precondiciones}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos debe estar registrado en el sistema.}
+    \UCitem{Postcondiciones}{El nuevo empleado podrá acceder al sistema con su identificador correspondiente. Los datos del nuevo empleado podrán ser visualizados y modificados.}
+    \UCitem{Errores}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos ingresa datos en un formato distinto al específicados u omite uno de los datos obligatorios.}
+    \UCitem{Tipo}{Caso de uso primario}
+    \UCitem{Observaciones}{}
+\end{UseCase}
+%--------------------------------------
+\begin{UCtrayectoria}{Principal}
+\UCpaso[\UCactor] Introduce su identificador de Usuario y Contraseña en el sistema vía la  \IUref{IU23}{Pantalla de Control de Acceso}\label{CU17Login}.
+
+\UCpaso[\UCactor] Confirma la operación presionando el botón \IUbutton{Entrar}.
+
+\UCpaso Visualiza la \IUref{IU09}{Administración de Recursos Humanos} Administración de Recursos Humanos
+\UCpaso[\UCactor] Ingresa al Menu de Empleados.
+
+\UCpaso[\UCactor] Oprime la opción \IUbutton{Alta de nuevos empleados}.
+
+\UCpaso[\UCactor] Ingresa los datos .
+
+\UCpaso Se despliega la \IUref{IU10}{Confirmación de Alta de Nuevo Empleado} Confirmación de Alta de Nuevo Empleado.
+
+\UCpaso El sistema almacena los datos del nuevo empleado.
+
+\UCpaso [\UCactor] Regresa a la \IUref{IU09}{Administración de Recursos Humanos} Administración de Recursos Humanos.
+
+
+\end{UCtrayectoria}
+
+%--------------------------------------		
+\begin{UCtrayectoriaA}{A}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos aborta el ingreso del nuevo empleado.}
+\UCpaso [\UCactor] Presiona \IUbutton{
+Cancelar} y se despliega la \IUref{IU11}{Confirmación de cancelación de Alta de Nuevo Empleado}
+\UCpaso El sistema regresa a la Pantalla de Administración de Recursos Humanos. No se almacena ningún dato.
+\end{UCtrayectoriaA}
+
+\begin{UCtrayectoriaA}{B}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos no ingresa un dato que es obligatorio}
+\UCpaso [\UCactor] Omite un dato obligatorio al dar de alta al nuevo empleado.
+\UCpaso Se despliega la \IUref{IU12}{Error de inserción de datos}
+\end{UCtrayectoriaA}
+
+%--------------------------------------
+% Puntos de extensión
+
+
+%-------------------------------------- TERMINA descripción del caso de uso.
