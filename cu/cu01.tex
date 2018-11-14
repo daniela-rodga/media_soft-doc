@@ -2,33 +2,31 @@
 % \IUref{IUModPS}{Modificar Planta de Selección}
 % \IUref{IUEliPS}{Eliminar Planta de Selección}
 
-% 
-
-
 % Copie este bloque por cada caso de uso:
 %-------------------------------------- COMIENZA descripción del caso de uso.
 
 %\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
 %--------------------------------------
 \begin{UseCase}{CU01}{Alta a un nuevo empleado}{
-	El Gerente de Recursos Humanos y/o un Agente de Recursos Humanos requiere dar de alta en el sistema a un empleado recién contratado.
-	}   
-	\UCitem{Nombre}{Alta a un nuevo empleado}
-    \UCitem{Descripción}{El Gerente y/o Agente(s) de Recursos Humanos serán capaces de ingresar la información personal referente a un nuevo empleado en la plantilla.}
-    \UCitem{Versión}{\color{Gray}0.1}
-    \UCitem{Autor}{\color{Gray}Daniela Rodríguez García}
-    \UCitem{Supervisa}{\color{Gray}Alejandro Bravo Torres}
-    \UCitem{Actor}{\hyperlink{Gerente de Recursos Humanos}{Gerente de Recursos Humanos, Agente de Recursos Humanos}}
-    \UCitem{Propósito}{Gerentes de los distintos departamentos serán capaces de conocer la informaci{on persona de su plantilla de trabajo.}
-    \UCitem{Entradas}{Nombre completo, dirección, teléfono fijo (opcional), teléfono celular, dirección de correo electrónico, situación, departamento, tipo de empleado.}
+}   
+    \UCitem{Id}{MDS-SIGRES-CU-01}
+    \UCitem{Descripción}{El Gerente de Recursos Humanos y/o un Agente de Recursos Humanos requiere dar de alta en el sistema a un empleado recién contratado.}
+    \UCitem{Propósito}{Ingresar los datos de un nuevo empleado para que Gerentes de los distintos departamentos sean capaces de conocer la información persona de su plantilla de trabajo.}
+    \UCitem{Precondiciones}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos debe estar registrado en el sistema.}
+    \UCitem{Postcondiciones}{El nuevo empleado podrá acceder al sistema con su identificador correspondiente. Los datos del nuevo empleado podrán ser visualizados y modificados.}
+    \UCitem{Entradas}{Datos personales del empleado como: nombre completo, dirección, teléfono fijo (opcional), teléfono celular, dirección de correo electrónico, situación, departamento, tipo de empleado.}
     \UCitem{Origen}{Teclado}
     \UCitem{Salidas}{Mensaje de Notificación, visualización de datos del empleado.}
     \UCitem{Destino}{Base de datos.}
-    \UCitem{Precondiciones}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos debe estar registrado en el sistema.}
-    \UCitem{Postcondiciones}{El nuevo empleado podrá acceder al sistema con su identificador correspondiente. Los datos del nuevo empleado podrán ser visualizados y modificados.}
     \UCitem{Errores}{El Gerente de Recursos Humanos y/o Agente de Recursos Humanos ingresa datos en un formato distinto al específicados u omite uno de los datos obligatorios.}
-    \UCitem{Tipo}{Caso de uso primario}
-    \UCitem{Observaciones}{bbrbrbr}
+    \UCitem{Prioridad}{Alta}
+    \UCitem{Volatilidad}{Alta}
+    \UCitem{Madurez}{Media}
+    \UCitem{Versión}{\color{Gray}0.3}
+    \UCitem{Estatus}{En desarrollo}
+    \UCitem{Autor}{\color{Gray}Daniela Rodríguez García}
+    \UCitem{Revisor}{\color{Gray}Alejandro Bravo Torres}
+    \UCitem{Fuentes}{RU57, RU61}
 \end{UseCase}
 %--------------------------------------
 \begin{UCtrayectoria}{Principal}
