@@ -241,6 +241,6 @@ TSWLatexianTemp*
 # generated if using elsarticle.cls
 *.spl
 
-*.pdf
+#*.pdf
 /.project
 .directory
