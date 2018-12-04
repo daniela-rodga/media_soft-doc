@@ -1,0 +1,60 @@
+% \IUref{IUAdmPS}{Administrar Planta de Selección}
+% \IUref{IUModPS}{Modificar Planta de Selección}
+% \IUref{IUEliPS}{Eliminar Planta de Selección}
+
+% 
+
+
+% Copie este bloque por cada caso de uso:
+%-------------------------------------- COMIENZA descripción del caso de uso.
+
+%\begin{UseCase}[archivo de imágen]{UCX}{Nombre del Caso de uso}{
+%--------------------------------------
+	\begin{UseCase}{CU15}{Eliminar Agente de Ventas}{
+		El Gerente de Ventas elimina de forma logia la información de un Agente de Ventas.
+	}
+		\UCitem{Versión}{\color{Gray}0.1}
+		\UCitem{Autor}{\color{Gray}Alejandro Bravo Torres}
+		\UCitem{Supervisa}{\color{Gray}Daniela }
+		\UCitem{Actor}{\hyperlink{Gerente de Ventas}{Gerente de Ventas}}
+		\UCitem{Propósito}{Que el gerente de Ventas pueda eliminar la información de un Agente de Ventas.}
+		\UCitem{Entradas}{Número de Empleado.}
+		\UCitem{Origen}{Teclado}
+		\UCitem{Salidas}{Mensaje de Notificación, Cambio del Estado del Agente de Ventas..}
+		\UCitem{Destino}{Pantalla para mensaje de coprobación.}
+		\UCitem{Precondiciones}{El Gerente de Ventas y el Agente de Ventas deben estar registrados en el Sistema.}
+		\UCitem{Postcondiciones}{El Agente de Ventas quedará inactivo de operación, es decir no podrá tener acceso ni participación en operaciones del sistema..}
+		\UCitem{Errores}{}
+		\UCitem{Tipo}{Caso de uso primario}
+		\UCitem{Observaciones}{}
+	\end{UseCase}
+%--------------------------------------
+	\begin{UCtrayectoria}{Principal}
+		\UCpaso[\UCactor] Introduce su Número de Usuario y Contraseña en el sistema vía la  \IUref{IU23}{Pantalla de Control de Acceso}\label{CU17Login}.
+		
+		\UCpaso[\UCactor] Confirma la operación presionando el botón \IUbutton{Entrar}.
+		
+		\UCpaso[\UCactor] Ingresa al Menu de Administración de Agentes
+		
+		\UCpaso Verifica que el Agente de Ventas sea elegible para Eliminar.
+		
+		\UCpaso[\UCactor] Selecciona la Opción de \IUbutton{Eliminar} del registro en la tabla de Agentes.
+		
+		\UCpaso Despliega la \IUref{IU32}{Pantalla de Confirmación de Eliminación de Empleado}. Pantalla de Confiracion de Eliminación de Empleado.  \Trayref{A}. 
+		
+		\UCpaso El sistema realiza un borrado Lógico, cambio de status, al Agente de ventas.
+		
+		\UCpaso Regresa a la Pantalla principal de Administración de Agentes.
+		
+		
+	\end{UCtrayectoria}
+
+%--------------------------------------		
+		\begin{UCtrayectoriaA}{A}{El Gerente de Ventas Cancela la Eliminación del Agente.}
+			\UCpaso El sistema regresa al aPantalla Principal de Administración de Empleados. No se modifica ningún Agente de Ventas. 
+		\end{UCtrayectoriaA}
+%--------------------------------------
+% Puntos de extensión
+	
+		
+%-------------------------------------- TERMINA descripción del caso de uso.
