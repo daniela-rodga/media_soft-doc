@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \documentclass[10pt,oneside,openany]{book}
 \usepackage{longtable}
 \usepackage{siunitx}
@@ -52,6 +53,73 @@
 \include{2Glosario}
 
 %=========================================================
+\include{3PropuestaProyecto}
+
+%=========================================================
+\include{4ModeloDinamico}
+
+%=========================================================
+\include{5ModeloDeInteraccion}
+=======
+\documentclass[10pt]{book}
+
+\usepackage{cdtBook}
+\usepackage{usecases}
+%\usepackage{booktabs}
+\usepackage{txfonts}
+
+\newcommand{\addfigure}[4]{
+	\begin{figure}[htbp!]
+		\begin{center}	
+			\fbox{\includegraphics[width=#1\textwidth]{#2}}
+			\caption{#4}
+			\label{#3}
+		\end{center}
+	\end{figure}
+}
+>>>>>>> master
+
+\title{Entregable C2-EP2\bigskip\\SISTEMA PARA LA GESTIÓN DE RENTA DE ESPACIOS PUBLICITARIOS}
+\subtitle{Componente 1 Iteración 2 Especificación del proyecto}
+\author{MEDIA SOFT}
+\organization{Escuela Superior de Cómputo, IPN}
+%\organization{Bravo Torres, Alejandro }
+%\organization{Rodríguez García, Daniela }
+%\organization{Rojas Calero, Kevin }
+%\organization{Santillán Yáñez, Joel }
+\showInstrucciones
+\date{\color{red}Borrador del 13 de Noviembre del 2018 \\(para revisión)}
+%\date{\color{green}Version 1.0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\ThisLRCornerWallPaper{1}{images/bannerAzul}
+\maketitle
+\thispagestyle{empty}
+
+
+\frontmatter
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{projectCharter}
+
+\mainmatter
+\LRCornerWallPaper{1}{images/plecaAyD}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%=========================================================
+\include{1introduccion}
+
+%=========================================================
+%\include{2ModeloDelAlcance}
+\include{2Glosario}
+
+%=========================================================
+%\include{3ModeloDelNegocio}
 \include{3PropuestaProyecto}
 
 %=========================================================
