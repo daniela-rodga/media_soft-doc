@@ -1,0 +1,128 @@
+%---------------------------------------------------------
+\subsection{Requerimientos funcionales}
+	Los requerimientos funcionales utilizan una clave RFX, donde:
+        
+\begin{description}
+        \item[X] Es un número consecutivo: 1, 2, 3, ...
+        \item[RF] Es la clave para todos los {\bf R}equerimientos {\bf F}uncionales.
+\end{description}
+
+	Además se usan las abreviaciones que se muestran en la tabla~\ref{tbl:leyendaRF}.
+\begin{table}[hbtp!]
+        \begin{center}
+    \begin{tabular}{|r l|}
+            \hline
+        {\footnotesize ID} & {\footnotesize\em Identificador del requerimiento.}\\
+        {\footnotesize REF} & {\footnotesize\em Referencia del requerimiento.}\\
+        {\footnotesize PRI.} & {\footnotesize\em Prioridad}\\
+        {\footnotesize MA} & {\footnotesize\em Prioridad Muy Alta.}\\
+        {\footnotesize A} & {\footnotesize\em Prioridad Alta.}\\
+        {\footnotesize M} & {\footnotesize\em Prioridad Media.}\\
+        {\footnotesize B} & {\footnotesize\em Prioridad Baja.}\\
+        {\footnotesize MB} & {\footnotesize\em Prioridad Muy Baja.}\\
+                \hline
+    \end{tabular} 
+    \caption{Leyenda para los requerimientos funcionales.}
+    \label{tbl:leyendaRF}
+        \end{center}
+\end{table}
+En la tabla ~\ref{tbl:listaRF} se muestran los requerimientos funcionales del sistema a realizar.
+<<<<<<< HEAD
+\begin{longtable}[H]{m{2cm}m{3cm}m{5cm}m{2cm}m{2cm}}
+=======
+\begin{longtable}[H]{m{1cm}m{3cm}m{8cm}m{2cm}m{1cm}}
+>>>>>>> master
+\toprule
+\centering \textbf{ID} & \centering  \textbf{Nombre} & \centering \textbf{Descripción} & \centering \textbf{REF}& \centering \textbf{PRI} \tabularnewline
+\midrule
+\textit{RF1} & \textbf{Alta a un nuevo empleado} & La aplicación deberá permitir el ingreso de un nuevo empleado rellenando los campos correspondientes: nombre completo (compuesto por nombre(s), apellido paterno y apellido materno), dirección (que abarca código postal, calle, número exterior, número interior, colonia, delegación, estado* y referencias), teléfono fijo (opcional), teléfono celular (con lada incluida), dirección de correo electrónico, situación (activo, inactivo), departamento (ventas, jurídico, infraestructura, capital humano) y tipo de empleado (agente, jefe). & RU57, RU61 & MA.\tabularnewline
+
+     \textit{RF2} & \textbf{Identificador de empleado} & A cada empleado registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él.& RF1 & MA\tabularnewline
+     
+     \textit{RF3} & \textbf{Visualización de los datos del empleado} & La aplicación deberá permitir visualizar los datos personales de un empleado específico con base en su identificador. & RU7, RU56, RU57, RU68 & MA\tabularnewline
+     
+     \textit{RF4} & \textbf{Cambio a un cliente} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un cliente previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio cliente u
+otro).& RU13, RU19 & MA\tabularnewline
+
+    \textit{RF5} & \textbf{Alta de un nuevo espectacular} & La aplicación deberá permitir el ingreso de un nuevo espectacular rellenando los campos correspondientes: ubicación en coordenadas (coordenadas reflejadas mediante un mapa), dirección de la ubicación (que abarca código postal, calle, número exterior, colonia, delegación, estado* y referencias), estado, fecha de inicio de contrato de arrendamiento (con formato día/mes/año, opcional), fecha de término de contrato de arrendamiento (con formato día/mes/año, opcional), agente de ventas asignado al contrato de arrendamiento (nombre e identificador, opcional), categoría del espectacular, impacto promedio, medio, vistas, iluminación y medidas.& RU72, RU80 & MA\tabularnewline
+    
+    \textit{RF6} & \textbf{Identificador del espectacular} & A cada espectacular registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él. & RF5 & MA\tabularnewline
+    
+    \textit{RF7} & \textbf{Visualización de los datos de un espectacular} & La aplicación deberá permitir visualizar la ubicación por coordenadas de cada uno de los espacios publicitarios que posee (mediante un mapa); dirección (que deberá tener los siguientes campos: código postal, calle, número exterior, colonia, delegación, estado* y referencias); fecha de inicio del período de renta (formato: día/mes/año), fecha de término del período de renta (formato: día/mes/año); agente de venta asociada (nombre e identificador); categoría (pudiendo tratarse de: V.I.P., vía primaria y vía secundaria); impacto (números esperados de personas que miran, en promedio y con base a un estudio de mercado previamente realizado y cargado a ella, el espectacular); medio (pantalla o lona); vistas (pudiendo tratarse de: una vista, dos vistas o tres vistas); iluminación (uenta con illuminación, no cuenta con iluminación); medidas (representadas en metros). & RU64, RU73, RU81, RU82 & MA\tabularnewline
+    
+     \textit{RF8} & \textbf{Cambio a un espectacular} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un espectacular previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio espectacular u otro). & RU65, RU74 & MA\tabularnewline
+     
+     \textit{RF9} & \textbf{Alta a un nuevo cliente} & La aplicación deberá permitir el ingreso de un nuevo cliente rellenando los campos correspondientes: nombre completo (compuesto por nombre(s), apellido paterno y apellido materno), dirección (que abarca código postal, calle, número exterior, número interior, colonia, delegación, estado* y referencias), teléfono fijo (opcional), teléfono celular (con lada incluida), dirección de correo electrónico, situación (de antaño, nuevo, perdido) y contratos asociados a éste (opcional).& RU11, RU18 & MA\tabularnewline
+     
+     \textit{RF10} & \textbf{Identificador de cliente} & A cada cliente registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él.& RF9 & MA\tabularnewline
+     
+     \textit{RF11} & \textbf{Visualización de los datos del cliente} & La aplicación deberá permitir visualizar los datos personales de un cliente específico con base en su identificador.& RU12 & MA\tabularnewline
+     
+     \textit{RF12} & \textbf{Cambio a un cliente} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un cliente previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio cliente u otro).& RU13, RU19 & MA\tabularnewline
+     
+     \textit{RF13} & \textbf{Alta de una póliza de seguro} & La aplicación deberá permitir el ingreso de una nueva póliza de seguro rellenando los campos correspondientes: nombre de la aseguradora contratada, número de póliza, fecha de inicio de cobertura de la póliza (con formato día/mes/año), fecha de término de cobertura de la póliza (con formato día/mes/año), cobertura de la póliza (monto y siniestros), estado (pudiendo encontrarse vigente, vencida a cambiar, por vencer y vencida registrada) y agente jurídico que tramitó dicha póliza (nombre e identificador).& RU34, RU50 & MA\tabularnewline
+     
+     \textit{RF14} & \textbf{Identificador de una póliza de seguro} & A cada póliza de seguro registrada se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre ella. & RF13 & MA \tabularnewline
+     
+     \textit{RF15} & \textbf{Asociar una póliza de seguro con un espectacular} & Al ingresar pólizas de seguro, toda póliza de seguro estará asociada a un espectacular.& RF13, RF14 & MA \tabularnewline
+     
+     \textit{RF16} & \textbf{Visualización de una póliza de seguro} & La aplicación deberá permitir visualizar los datos de una póliza de seguro específica con base en su identificador. & RU30, RU46 & MA\tabularnewline
+     
+     \textit{RF17} & \textbf{Cambio a una póliza de seguro} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a una póliza de seguro previamente registrada con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni de la propia póliza u otra). & RU38, RU54 & MA\tabularnewline
+     
+     \textit{RF18} & \textbf{Alta de un permiso de la Secretaría de Seguridad Pública} & La aplicación deberá permitir el ingreso de un nuevo permiso de la Secretaría de Seguridad Pública rellenando los campos correspondientes: número de permiso, fecha de inicio de cobertura del permiso (con formato día/mes/año), fecha de término de cobertura del permiso (con formato día/mes/año), estado (pudiendo encontrarse vigente, vencido a cambiar, por vencer y vencida registrado) y agente jurídico que tramitó dicho permiso (nombre e identificador).& RU32, RU48, & MA\tabularnewline
+     
+     \textit{RF19} & \textbf{Identificador de un permiso de la Secretaría de Seguridad Pública} & A permiso de la Secretaría de Seguridad Pública registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él. & RF18 & MA\tabularnewline
+     
+     \textit{RF20} & \textbf{Asociar un permiso de la Secretaría de Seguridad Pública} & Al ingresar permisos de la Secretaría de Seguridad Pública, todo permiso estará asociado a un espectacular. & RF17, RF18 & MA\tabularnewline
+     
+     \textit{RF21} & \textbf{Visualización de un permiso de la Secretaría de Seguridad Pública} & La aplicación deberá permitir deberá permitir visualizar los datos de un permiso de la Secretaría de Seguridad Pública específica con base en su identificador.& RU28, RU44 & MA\tabularnewline
+     
+     \textit{RF22} & \textbf{Cambio a un permiso de la Secretaría de Seguridad Pública} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un permiso de la Secretaría de Seguridad Pública previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio permiso u otro). & RU36, RU52  & MA\tabularnewline
+     
+     \textit{RF23} & \textbf{Alta de un permiso de la Secretaría de Protección Civil} & La aplicación deberá permitir el ingreso de un nuevo permiso de la Secretaría de Protección Civil rellenando los campos correspondientes: número de permiso, fecha de inicio de cobertura del permiso (con formato día/mes/año), fecha de término de cobertura del permiso (con formato día/mes/año), estado (pudiendo encontrarse vigente, vencido a cambiar, por vencer y vencida registrado) y agente jurídico que tramitó dicho permiso (nombre e identificador). & RU33, RU49 & MA\tabularnewline
+     
+     \textit{RF24} & \textbf{Identificador de un permiso de la Secretaría de Protección Civil} & A permiso de la Secretaría de Protección Civil registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él. & RF23 & MA\tabularnewline
+     
+     \textit{RF25} & \textbf{Asociar un permiso de la Secretaría de Protección Civil} & Al ingresar permisos de la Secretaría de Protección Civil, todo permiso estará asociado a un espectacular. & RF23, RF24 & MA\tabularnewline
+     
+     \textit{RF26} & \textbf{Visualización de un permiso de la Secretaría de Protección Civil} & La aplicación deberá permitir deberá permitir visualizar los datos de un permiso de la Secretaría de Protección Civil específica con base en su identificador.& RU29, RU45 & MA\tabularnewline
+     
+     \textit{RF27} & \textbf{Cambio a un permiso de la Secretaría de Protección Civil} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un permiso de la Secretaría de Protección Civil previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio permiso u otro). & RU37, RU53 & MA\tabularnewline
+     
+     \textit{RF28} & \textbf{Alta de un permiso de la Secretaría de Obras y Servicios} & La aplicación deberá permitir el ingreso de un nuevo permiso de la Secretaría de Obras y Servicios rellenando los campos correspondientes: número de permiso, fecha de inicio de cobertura del permiso (con formato día/mes/año), fecha de término de cobertura del permiso (con formato día/mes/año), estado (pudiendo encontrarse vigente, vencido a cambiar, por vencer y vencida registrado) y agente jurídico que tramitó dicho permiso (nombre e identificador).& RU35, RU51 & MA\tabularnewline
+     
+     \textit{RF29} & \textbf{Identificador de un permiso de la Secretaría de Obras y Servicios} & A permiso de la Secretaría de Obras y Servicios registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él.& RF28 & MA\tabularnewline
+     
+     \textit{RF30} & \textbf{Asociar un permiso de la Secretaría de Obras y Servicios} & Al ingresar permisos de la Secretaría de Obras y Servicios, todo permiso estará asociado a un espectacular. & RF27, RF28 & MA\tabularnewline
+     
+     \textit{RF31} & \textbf{Visualización de un permiso de la Secretaría de Obras y Servicios} & La aplicación deberá permitir deberá permitir visualizar los datos de un permiso de la Secretaría de Obras y Servicios específico con base en su identificador.& RU31, RU47 & MA\tabularnewline
+     
+     \textit{RF32} & \textbf{Cambio a un permiso de la Secretaría de Obras y Servicios} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un permiso de la Secretaría de Obras y Servicios previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio permiso u otro). & RU39, RU55 & MA\tabularnewline
+     
+     \textit{RF33} & \textbf{Visualización del listado de espectaculares} & La aplicación deberá permitir la visualización de la lista completa de los espectaculares registrados en ella en el momento que se pida. & RU64, RU73 & MA\tabularnewline
+     
+     \textit{RF34} & \textbf{Visualización del listado de clientes} & La aplicación deberá permitir la visualización de la lista completa de los clientes registrados en ella en el momento que se pida.& RU12, RU16, RU17 & MA\tabularnewline
+     
+     \textit{RF35} & \textbf{Visualización del listado de empleados} & La aplicación deberá permitir la visualización de la lista completa de los empleados registrados en ella en el momento que se pida.& RU56, RU60 & MA\tabularnewline
+     
+     \textit{RF36} & \textbf{Visualización del listado de permisos y pólizas asociados a un espectacular} & La aplicación deberá permitir la visualización de la lista completa de los peermisos y pólizas registrados en ella asociados a un espectacular mediante su identificador en el momento que se pida.& RU28-RU31, RU44-RU47 & MA\tabularnewline
+     
+     \textit{RF37} & \textbf{Póliza vencida registrada}& Únicamente el Titular de Jurídico podrá actualizar el estado de una póliza de seguros asociada a un espectacular a "vencida registrada".& RU42 & MA\tabularnewline
+     
+     \textit{RF38} & \textbf{Permiso vencido registrado}& Únicamente el Titular de Jurídico podrá actualizar el(los) estado(s) de un(varios) permiso(s) (cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México) asociado a un espectacular a "vencido registrado".& RU40, RU41, RU43 & MA\tabularnewline
+     
+     \textit{RF39} & \textbf{Espectacular descontinuado} & Únicamente el Jefe de Infraestructura podrá actualizar el estado de un espectacular a "descontinuado".& RU66 &MA\tabularnewline
+     
+     \textit{RF40} & \textbf{Empleado inactivo} & Únicamente el Jefe de Capital Humano podrá actualizar el estado de un empleado de cualesquiera de los departamentos a "inactivo".& RU59 & MA\tabularnewline
+     
+     \textit{RF41} & \textbf{Cliente perdido} & Únicamente el Gerente de Ventas podrá actualizar el estado de un cliente a "perdido". & RU14 & MA\tabularnewline
+     
+\caption{Requerimientos funcionales del sistema}
+\label{tbl:listaRF}
+\bottomrule
+<<<<<<< HEAD
+\end{longtable}
+=======
+\end{longtable}
+>>>>>>> master

@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{float}
+\usepackage{commath}
+\usepackage[spanish]{babel}
+\usepackage{ragged2e}
+\usepackage{natbib}
+\usepackage{glossaries}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usepackage{pgfgantt}
+\usepackage{fancyhdr}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{siunitx}
+\usepackage{tabularx}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\rightmark}
+\rfoot{Página \thepage}
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+\begin{figure}
+\begin{minipage}{.22\textwidth}
+  \centering
+  \includegraphics[scale=0.05]{ipn.png}
+\end{minipage}%
+\begin{minipage}{.56\textwidth}
+\begin{center}
+\Large{Instituto Politécnico Nacional}\par
+\vspace{7mm}
+Escuela Superior de Cómputo
+\end{center}
+\end{minipage}%
+\begin{minipage}{.22\textwidth}
+  \centering
+  \includegraphics[scale=0.5]{escom.jpg}
+\end{minipage}
+\end{figure}
+\newcommand{\addfigure}[4]{
+        \begin{figure}[htbp!]
+            \begin{center}	
+                \fbox{\includegraphics[width=#1\textwidth]{#2}}
+                \caption{#4}
+                \label{#3}
+            \end{center}
+        \end{figure}
+  }
+\large{\hspace{1mm}}\par
+\vspace{5mm}
+\large{MEDIA SOFT}\par
+\vspace{30mm}
+\large{\textbf{\textit{SISTEMA DE GESTIÓN PARA LA RENTA DE ESPACIOS PUBLICITARIOS.}}}\par
+\vspace{15mm}
+\vspace {15mm}
+\large{\textbf{Presentan:}}\par
+\vspace {5mm}
+\large{Bravo Torres Alejandro}\par
+\large{Rodríguez García Daniela}\par
+\large{Rojas Calero Kevin}\par
+\large{Santillán Yáñez Joel}\par
+\vspace{10mm}
+\end{center} 
+\end{titlepage}
+\newpage
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+\section{Planteamiento del proyecto}
+\subsection{Resumen}
+Espectaculares S.A. vino a nosotros comentándonos acerca de los ligeros inconvenientes que ya presenta el sistema de administración de recursos empresariales (ERP) que actualmente posee: es insuficiente para la cantidad de procesos que ellos manejan, y varios de éstos ni siquieran son capaces de administrarse vía ERP.
+
+El presente proyecto, se desarrolla en busca de ofrecer un sistema para la correcta gestión de la renta de los espacios publicitarios que ofertan.
+\section{Interacción del usuario}
+\subsection{Procesos del negocio}
+\begin{longtable}[H]{m{4cm}m{8cm}}
+    \toprule
+    
+    \centering \textbf{Usuario} & \centering  \textbf{Procesos} \tabularnewline
+    \midrule
+    \textbf{Gerente de Ventas} & Alta de un nuevo cliente, cambios a un cliente existente, búsqueda de un cliente, visualización datos de todo el listado de clientes, eliminación de datos de un cliente perdido.\tabularnewline
+    \textbf{Agente de ventas} & Alta de un nuevo cliente, cambios a un cliente existente, búsqueda de un cliente, visualización datos de todo el listado de clientes.\tabularnewline
+    \textbf{Titular de Jurídico} & Alta de un nuevo permiso (cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México), cambios a un permiso registrado (cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México), búsqueda de un permiso registradi (cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México), visualización datos de todo el listado de permisos vigentes asociado a un espectacular, alta de una nueva póliza de seguros de un espectacular, cambios  a una póliza de seguros de un espectacular,  visualización datos de póliza de seguros vigente asociada a un espectacular, eliminación de datos de una póliza de seguros, eliminación de datos de un permiso cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México).\tabularnewline
+    \textbf{Agente jurídico} & Alta de un nuevo permiso (cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México), cambios a un permiso registrado (cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México), búsqueda de un permiso registradi (cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México), visualización datos de todo el listado de permisos vigentes asociado a un espectacular, alta de una nueva póliza de seguros de un espectacular, cambios  a una póliza de seguros de un espectacular,  visualización datos de póliza de seguros vigente asociada a un espectacular.\tabularnewline
+    \textbf{Jefe de Infraestructura} & Alta de un nuevo espectacular, cambios a un espectacular existente, búsqueda de un espectacular, visualización datos de todo el listado de espectaculares, eliminación de un espectacular.\tabularnewline
+    \textbf{Agente de Infraestructura} & Alta de un nuevo espectacular, cambios a un espectacular existente, búsqueda de un espectacular, visualización datos de todo el listado de espectaculares.\tabularnewline
+    \textbf{Jefe de Capital Humano} & Alta de un nuevo empleado, cambios a un empleado existente, visualización datos de todo el listado de empleados, eliminación de un empleado.\tabularnewline
+    \textbf{Agente de Capital Humano} & Alta de un nuevo empleado, cambios a un empleado existente, visualización datos de todo el listado de empleados.
+    \caption{Usuarios y procesos contemplados}
+\label{tbl:listaUP}
+   \bottomrule
+\end{longtable}
+
+\section{Especificación de requerimientos}
+
+\subsection{Requerimientos funcionales del sistema}
+
+{\small
+\begin{longtable}[H]{m{2cm}m{4cm}m{6cm}}
+    \caption{\normalsize{Requerimientos funcionales del sistema ACT- 18-09-18 02:38}}\\
+    
+    \toprule
+    
+    \centering \textbf{ID} & \centering  \textbf{Nombre} & \centering \small \textbf{Descripción} \tabularnewline
+    \midrule
+    \textit{RF1} & \textbf{Alta a un nuevo empleado} & La aplicación deberá permitir el ingreso de un nuevo empleado rellenando los campos correspondientes: nombre completo (compuesto por nombre(s), apellido paterno y apellido materno), dirección (que abarca código postal, calle, número exterior, número interior, colonia, delegación, estado* y referencias), teléfono fijo (opcional), teléfono celular (con lada incluida), dirección de correo electrónico, situación (activo, inactivo), departamento (ventas, jurídico, infraestructura, capital humano) y tipo de empleado (agente, jefe).\tabularnewline
+     \textit{RF2} & \textbf{Identificador de empleado} & A cada empleado registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él.\tabularnewline
+     \textit{RF3} & \textbf{Visualización de los datos del empleado} & La aplicación deberá permitir visualizar los datos personales de un empleado específico con base en su identificador.\tabularnewline
+     \textit{RF4 (checa RF9)} & \textbf{Cambio a un cliente} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un cliente previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio cliente u otro).\tabularnewline
+    \textit{RF5} & \textbf{Alta de un nuevo espectacular} & La aplicación deberá permitir el ingreso de un nuevo espectacular rellenando los campos correspondientes: ubicación en coordenadas, dirección de la ubicación (que abarca código postal, calle, número exterior, colonia, delegación, estado* y referencias), estado, fecha de inicio de contrato de arrendamiento (con formato día/mes/año, opcional), fecha de término de contrato de arrendamiento (con formato día/mes/año, opcional), agente de ventas asignado al contrato de arrendamiento (nombre e identificador, opcional), categoría del espectacular, impacto promedio, medio, vistas, iluminación y medidas.\tabularnewline
+    \textit{RF6} & \textbf{Identificador del espectacular} & A cada espectacular registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él. \tabularnewline
+    \textit{RF7} & \textbf{Visualización de las coordenadas del espectacular} & La aplicación deberá permitir visualizar la ubicación por coordenadas de cada uno de los espacios publicitarios que posee (mediante un mapa). \tabularnewline
+    \textit{RF8} & \textbf{Visualización de la dirección del espectacular} & La aplicación deberá permitir visualizar la dirección de cada uno de los espacios publicitarios que tiene a su disposición que deberá tener los siguientes campos: código postal, calle, número exterior, colonia, delegación, estado* y referencias. \tabularnewline
+    \textit{RF9(antes RF4 ESTE NO VA EN CASO DE USO!!)} & \textbf{Visualización  del estado del espectacular} & La aplicación deberá permitir la correcta visualización del estado del espectacular, que se limitan a: en matenimiento preventivo, en mantenimiento correctivo, requiere mantenimiento preventivo, requiere mantenimiento correctivo, en instalación, disponible, apartado, en desmontaje, en uso, dañado, descontinuado. \tabularnewline
+    \textit{RF10} & \textbf{Visualización del inicio del período de renta} & Deberá ser posible observar la fecha de inicio del período de renta de un espectacular. La fecha tendrá el siguiente formato: día/mes/año. \tabularnewline
+    \textit{RF11} & \textbf{Visualización de término del período de renta} & Deberá ser posible observar la fecha de término del período de renta de un espectacular. La fecha tendrá el siguiente formato: día/mes/año.
+    \tabularnewline
+    \textit{RF12} & \textbf{Visualización del agente de venta} & La aplicación deberá otorgar el nombre del agente de venta asociado a dicho contrato de arrendamiento. \tabularnewline
+    \textit{RF13} & \textbf{Visualización de la categoría a la que pertenece el espectacular} & Deberá ser posible mirar la categoría a la que pertenece el espectacular, pudiendo tratarse de: V.I.P., vía primaria y vía secundaria. \tabularnewline
+    \textit{RF14} & \textbf{Visualización del impacto del espacio publicitario} & La aplicación deberá otorgar números esperados de personas que miran (en promedio y con base a un estudio de mercado previamente realizado y cargado a ella) el espectacular. \tabularnewline
+    \textit{RF15} & \textbf{Visualización del medio del espectacular} & La aplicación deberá permitir la visualización del recurso visual del espectacular, pudiendo ser: pantalla o lona. \tabularnewline
+    \textit{RF16} & \textbf{Visualización de las vistas del espectacular} & La aplicación deberá mostrar correctamente el número de vistas que posee un determinado espectacular, pudiendo tratarse de: una vista, dos vistas o tres vistas. \tabularnewline
+    \textit{RF17} & \textbf{Visualización de la iluminación del espectacular} & La aplicación deberá permitir la visualización del estado de la iluminación del espectacular siendo éstos únicamente: cuenta con illuminación, no cuenta con iluminación. \tabularnewline
+    \textit{RF18} & \textbf{Visualización de las medidas del espectacular} & La aplicación deberá permitir la visualización de las medidas espectacular siendo éstas representadas en metros. \tabularnewline
+     \textit{RF19} & \textbf{Cambio a un espectacular} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un espectacular previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio espectacular u otro). \tabularnewline
+     \textit{RF20} & \textbf{Alta a un nuevo cliente} & La aplicación deberá permitir el ingreso de un nuevo cliente rellenando los campos correspondientes: nombre completo (compuesto por nombre(s), apellido paterno y apellido materno), dirección (que abarca código postal, calle, número exterior, número interior, colonia, delegación, estado* y referencias), teléfono fijo (opcional), teléfono celular (con lada incluida), dirección de correo electrónico, situación (de antaño, nuevo, perdido) y contratos asociados a éste (opcional).\tabularnewline
+     \textit{RF21} & \textbf{Identificador de cliente} & A cada cliente registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él.\tabularnewline
+     \textit{RF22} & \textbf{Visualización de los datos del cliente} & La aplicación deberá permitir visualizar los datos personales de un cliente específico con base en su identificador.\tabularnewline
+     \textit{RF23} & \textbf{Cambio a un cliente} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un cliente previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio cliente u otro).\tabularnewline
+     \textit{RF24} & \textbf{Alta de una póliza de seguro} & La aplicación deberá permitir el ingreso de una nueva póliza de seguro rellenando los campos correspondientes: nombre de la aseguradora contratada, número de póliza, fecha de inicio de cobertura de la póliza (con formato día/mes/año), fecha de término de cobertura de la póliza (con formato día/mes/año), cobertura de la póliza (monto y siniestros), estado (pudiendo encontrarse vigente, vencida a cambiar, por vencer y vencida registrada) y agente jurídico que tramitó dicha póliza (nombre e identificador).\tabularnewline
+     \textit{RF25} & \textbf{Identificador de una póliza de seguro} & A cada póliza de seguro registrada se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre ella.& \tabularnewline
+     \textit{RF26} & \textbf{Asociar una póliza de seguro con un espectacular} & Al ingresar pólizas de seguro, toda póliza de seguro estará asociada a un espectacular. \tabularnewline
+     \textit{RF27} & \textbf{Visualización de una póliza de seguro} & La aplicación deberá permitir visualizar los datos de una póliza de seguro específica con base en su identificador.\tabularnewline
+     \textit{RF28} & \textbf{Cambio a una póliza de seguro} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a una póliza de seguro previamente registrada con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni de la propia póliza u otra).\tabularnewline
+     \textit{RF29} & \textbf{Alta de un permiso de la Secretaría de Seguridad Pública} & La aplicación deberá permitir el ingreso de un nuevo permiso de la Secretaría de Seguridad Pública rellenando los campos correspondientes: número de permiso, fecha de inicio de cobertura del permiso (con formato día/mes/año), fecha de término de cobertura del permiso (con formato día/mes/año), estado (pudiendo encontrarse vigente, vencido a cambiar, por vencer y vencida registrado) y agente jurídico que tramitó dicho permiso (nombre e identificador).\tabularnewline
+     \textit{RF30} & \textbf{Identificador de un permiso de la Secretaría de Seguridad Pública} & A permiso de la Secretaría de Seguridad Pública registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él. \tabularnewline
+     \textit{RF31} & \textbf{Asociar un permiso de la Secretaría de Seguridad Pública} & Al ingresar permisos de la Secretaría de Seguridad Pública, todo permiso estará asociado a un espectacular. \tabularnewline
+     \textit{RF32} & \textbf{Visualización de un permiso de la Secretaría de Seguridad Pública} & La aplicación deberá permitir deberá permitir visualizar los datos de un permiso de la Secretaría de Seguridad Pública específica con base en su identificador.\tabularnewline
+     \textit{RF33} & \textbf{Cambio a un permiso de la Secretaría de Seguridad Pública} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un permiso de la Secretaría de Seguridad Pública previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio permiso u otro).\tabularnewline
+     \textit{RF34} & \textbf{Alta de un permiso de la Secretaría de Protección Civil} & La aplicación deberá permitir el ingreso de un nuevo permiso de la Secretaría de Protección Civil rellenando los campos correspondientes: número de permiso, fecha de inicio de cobertura del permiso (con formato día/mes/año), fecha de término de cobertura del permiso (con formato día/mes/año), estado (pudiendo encontrarse vigente, vencido a cambiar, por vencer y vencida registrado) y agente jurídico que tramitó dicho permiso (nombre e identificador).\tabularnewline
+     \textit{RF35} & \textbf{Identificador de un permiso de la Secretaría de Protección Civil} & A permiso de la Secretaría de Protección Civil registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él. \tabularnewline
+     \textit{RF36} & \textbf{Asociar un permiso de la Secretaría de Protección Civil} & Al ingresar permisos de la Secretaría de Protección Civil, todo permiso estará asociado a un espectacular. \tabularnewline
+     \textit{RF37} & \textbf{Visualización de un permiso de la Secretaría de Protección Civil} & La aplicación deberá permitir deberá permitir visualizar los datos de un permiso de la Secretaría de Protección Civil específica con base en su identificador.\tabularnewline
+     \textit{RF38} & \textbf{Cambio a un permiso de la Secretaría de Protección Civil} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un permiso de la Secretaría de Protección Civil previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio permiso u otro).\tabularnewline
+     \textit{RF39} & \textbf{Alta de un permiso de la Secretaría de Obras y Servicios} & La aplicación deberá permitir el ingreso de un nuevo permiso de la Secretaría de Obras y Servicios rellenando los campos correspondientes: número de permiso, fecha de inicio de cobertura del permiso (con formato día/mes/año), fecha de término de cobertura del permiso (con formato día/mes/año), estado (pudiendo encontrarse vigente, vencido a cambiar, por vencer y vencida registrado) y agente jurídico que tramitó dicho permiso (nombre e identificador).\tabularnewline
+     \textit{RF40} & \textbf{Identificador de un permiso de la Secretaría de Obras y Servicios} & A permiso de la Secretaría de Obras y Servicios registrado se le asignará un identificador único, que será utilizado para identificarle en todos los procesos subsecuentes que se realicen sobre él. \tabularnewline
+     \textit{RF41} & \textbf{Asociar un permiso de la Secretaría de Obras y Servicios} & Al ingresar permisos de la Secretaría de Obras y Servicios, todo permiso estará asociado a un espectacular. \tabularnewline
+     \textit{RF42} & \textbf{Visualización de un permiso de la Secretaría de Obras y Servicios} & La aplicación deberá permitir deberá permitir visualizar los datos de un permiso de la Secretaría de Obras y Servicios específica con base en su identificador.\tabularnewline
+     \textit{RF43} & \textbf{Cambio a un permiso de la Secretaría de Obras y Servicios} & La aplicación deberá otorgar la opción para hacer uno o varios cambios a cualesquiera de los campos asociados a un permiso de la Secretaría de Obras y Servicios previamente registrado con base a su identificador, sin que se afecte la información que no sea especificada a realizarse un cambio (ni del propio permiso u otro).\tabularnewline
+     \textit{RF44} & \textbf{Visualización del listado de espectaculares} & La aplicación deberá permitir la visualización de la lista completa de los espectaculares registrados en ella en el momento que se pida.\tabularnewline
+     \textit{RF45} & \textbf{Visualización del listado de clientes} & La aplicación deberá permitir la visualización de la lista completa de los clientes registrados en ella en el momento que se pida.\tabularnewline
+     \textit{RF46} & \textbf{Visualización del listado de empleados} & La aplicación deberá permitir la visualización de la lista completa de los empleados registrados en ella en el momento que se pida.\tabularnewline
+     \textit{RF47} & \textbf{Visualización del listado de permisos y pólizas asociados a un espectacular} & La aplicación deberá permitir la visualización de la lista completa de los peermisos y pólizas registrados en ella asociados a un espectacular mediante su identificador en el momento que se pida.\tabularnewline
+     \textit{RF48} & \textbf{Póliza vencida registrada}& Únicamente el Titular de Jurídico podrá actualizar el estado de una póliza de seguros asociada a un espectacular a "vencida registrada".\tabularnewline
+     \textit{RF49} & \textbf{Permiso vencido registrado}& Únicamente el Titular de Jurídico podrá actualizar el(los) estado(s) de un(varios) permiso(s) (cualesquiera de los tres emitidos por: Secretaría de Seguridad Pública de la Ciudad de México, Secretaría de Obras y Servicios de la Ciudad de México, Secretaría de Protección Civil de la Ciudad de México) asociado a un espectacular a "vencido registrado".\tabularnewline
+     \textit{RF49} & \textbf{Espectacular descontinuado} & Únicamente el Jefe de Infraestructura podrá actualizar el estado de un espectacular a "descontinuado".\tabularnewline
+     \textit{RF50} & \textbf{Empleado inactivo} & Únicamente el Jefe de Capital Humano podrá actualizar el estado de un empleado de cualesquiera de los departamentos a "inactivo".\tabularnewline
+     \textit{RF51} & \textbf{Cliente perdido} & Únicamente el Gerente de Ventas podrá actualizar el estado de un cliente a "perdido".\tabularnewline
+     
+    \bottomrule
+    
+\end{longtable}
+}
+\newpage
+\subsection{Requerimientos no funcionales del sistema}
+
+{\small
+\begin{longtable}[H]{m{2cm}m{4cm}m{6cm}}
+    \caption{\normalsize{Requerimientos no funcionales del sistema}}\\
+    
+    \toprule
+    
+    \centering \textbf{ID} & \centering  \textbf{Nombre} & \centering \small \textbf{Descripción} \tabularnewline
+    \midrule
+    \textit{RNF1} & \textbf{Responsiva} & La aplicación deberá ser diseñada para su correcta visualización tanto en navegadores para dispositivos móviles como de escritorio. \tabularnewline
+    \textit{RNF2} & \textbf{Condiciones de acceso} & La aplicación deberá permitir el acceso al usuario, siempre y cuando no se presenten un fallo. \tabularnewline
+    \textit{RNF3} & \textbf{Duración de fallos} & El promedio de tiempo de duración en las fallas que se presenten en la aplicación no podrá ser mayor a 2 horas. \tabularnewline
+    \textit{RNF4} & \textbf{Capacidad de acceso} & La aplicación debe ser capaz de operar adecuadamente con 1,000 usuarios (entre empleados y clientes)) utilizándola a la vez. \tabularnewline
+    \textit{RNF5} & \textbf{Compatibilidad del navegador} & La aplicación deberá ser visualizada correctamente por los siguientes navegadores: Google Chrome, Mozilla Firefox y Safari. \tabularnewline
+    \bottomrule
+\end{longtable}
+}
+
+\end{document}

@@ -1,0 +1,85 @@
+
+Objetivos de Pruebas:
+
+Detectar y corregir Defectos en el software de una manera temprana para obtener una mayor calidad en el software del SIGRES. 
+Reducir deteccion de errores en producción para poder cumplir los objetivos acordados con nuestro Cliente. 
+Verificar que el sistema tenga la funcionalidad correcta conforme las entradas adecuadas y verificando que sean las salidas esperadas.
+
+Alcance de Pruebas
+	Propiedades a probar:
+		Fiabilidad: Probabilidad de que el sistema funcione bajo condiciones fijas.
+		Disponibilidad: Timpo de Disposicion e indispocición del Sistema, horas críticas
+		Confibilidad
+
+	Base de Pruebas: Documento de Anáisis C2-P2, Documento de Diseño C2-P3, Código Fuente, Modelo de Datos
+
+	Enfoque de Pruebas:
+		Teniendo en cuenta que el Cliente es dueño del 95% del mercado de Espectaculares y la cantidad de personal que maneja, nuestra cobertura de pruebas para el sistema, se realizarán Pruebas Funcionabilidad, Pruebas de Usabilidad y Pruebas de Compatibilidad.
+	Tiempo:
+		Las pruebas a desarrollar, están contempladas en un periodo de tiempo desde el 16 de Septiembre al 10 de Diciembre.
+
+	Crieterio de salida:
+		Que al menos el 60% de los Requerimientos Funcionales tengan el comportamiento planeado y generen el valor Deseado para la Empresa.
+
+Pruebas a Realizar
+	http://ing-sw.blogspot.com/2005/04/tipos-de-pruebas-de-software.html
+	Tipos de Pruebas:
+		Funcionabilidad
+		Compatibilidad
+		Usabilidad
+		
+
+	Niveles de Pruebas:
+		Pruebas Unitarias:
+			Se centra en ejecutar cada Módulo, con la finalidad de asegurar que el código funcione deacuerdo a las especificaciones.
+
+		Pruebas de Componente/Integración:
+
+		Pruebas de Sistema:
+		Pruebas de Aceptación:
+
+	
+	Estrategias de Prueba
+		ISTQB, modelo en V.
+
+
+	Pruebas de Recárga:
+		https://www.panel.es/blog/software-qa-cuales-son-los-tipos-de-pruebas-software/
+		
+		Realizar Pruebas a la Pruebas ya realizadas y corregidas con finalidad de verificar la corrección de los defectos. 
+
+	Pruebas de Regresión:
+		Consiste en realizar pruebas aalgun componente despues de haberse modificado o coregido para descubrir algun defecto omitido con anterioridad o como consecuancia de la modificación. Este tipo de pruebas son ejecutados al momento de que el Software ha sido modificado.
+
+		https://www.panel.es/blog/software-qa-cuales-son-los-tipos-de-pruebas-software/
+
+	Pruebas de Estrés:
+		Es parte de las Pruebas No funcionales que consisten en erificar y medir el Redimiento del Software.
+
+
+	Proceso de Pruebas:
+		Actividades + Calendario Gant (Danniela)
+
+
+	Equipo de Pruebas:
+		Team de Testers + Hardare de Pruebas PD's y Móbiles.
+
+
+
+Diseño de Pruebas:
+	Pruebas Funcionales (Funcionabilidad)
+		Suite No.1: Control de Acceso
+			Alcance
+			Version
+			Propiedades
+			Nivel
+			Tipo
+			Casos de Prueba:
+				Entradas
+				Salidas
+				Salidas Esperadas
+			Secuenciacion
+			Prerequisitos
+
+Glosario:
+Módulo: Unidad mínima a ser Probada, Ej. Una Clase.

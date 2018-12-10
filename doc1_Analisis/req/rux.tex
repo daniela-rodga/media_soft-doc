@@ -1,0 +1,206 @@
+%---------------------------------------------------------
+\subsection{Requerimientos de usuario}
+Los requerimientos del usuario utilizan una clave RUX, donde:
+
+\begin{description}
+        \item[X] Es un número consecutivo: 1, 2, 3, ...
+        \item[RU] Es la clave para todos los {\bf R}equerimientos del {\bf U}suario.
+\end{description}
+\newpage
+Además se usan las abreviaciones que se muestran en la tabla~\ref{tbl:leyendaRU}.
+\begin{table}[hbtp!]
+        \begin{center}
+    \begin{tabular}{|r l|}
+            \hline
+        {\footnotesize ID} & {\footnotesize\em Identificador del requerimiento.}\\
+        {\footnotesize PRI.} & {\footnotesize\em Prioridad}\\
+        {\footnotesize MA} & {\footnotesize\em Prioridad Muy Alta.}\\
+        {\footnotesize A} & {\footnotesize\em Prioridad Alta.}\\
+        {\footnotesize M} & {\footnotesize\em Prioridad Media.}\\
+        {\footnotesize B} & {\footnotesize\em Prioridad Baja.}\\
+        {\footnotesize MB} & {\footnotesize\em Prioridad Muy Baja.}\\
+                \hline
+    \end{tabular} 
+    \caption{Leyenda para los requerimientos de usuario.}
+    \label{tbl:leyendaRU}
+        \end{center}
+\end{table}
+
+En la tabla ~\ref{tbl:listaRU} se muestran los requerimientos de usuario que se tomaron en cuenta para la realización de esta propuesta.
+
+<<<<<<< HEAD
+\begin{longtable}[H]{m{2cm}m{3cm}m{5cm}m{2cm}}
+\toprule
+\centering \textbf{ID} & \centering  \textbf{Nombre} & \centering \textbf{Descripción} & \centering \textbf{PRI} \tabularnewline
+\midrule
+\textit{RU1} &\textbf{Visualización detalles cliente} & El cliente requiere de la correcta visualización de los detalles (fecha de inicio del contrato de renta, fecha de término del contrato de renta, número de espectaculares, número de contrato de renta, precio pactado en el contrato de renta) de cada uno de los espectaculares  de los cuales firmó un contrato de arrendamiento con la empresa. (hasta 1 año atrás, y los que  tenga rentados en el momento de la petición). & B\tabularnewline
+\textit{RU2} &\textbf{Solicitud de renovación contrato} & El cliente requiere de una opción que le facilite una solicitud de renovación del contrato de renta a la empresa. & MB\tabularnewline
+\textit{RU3} &\textbf{Solicitud presupuesto} & El cliente requiere solicitar un presupuesto de contrato de renta. & MB\tabularnewline
+\textit{RU4} &\textbf{Notificación renovación contrato} & El cliente necesita ser notificado acerca de la respuesta a su solicitud de renovación del contrato de renta por la empresa al menos 3 días hábiles antes de  que inicie el nuevo período de renta. & MB\tabularnewline
+\textit{RU5} &\textbf{Notificación presupuesto} & El cliente necesita ser notificado acerca de la respuesta  a su solicitud de presupuesto de renta por la empresa como máximo 3 días hábiles después de que éste la elaboró. &\tabularnewline
+\textit{RU6} &\textbf{Facturación} & El cliente requiere que la empresa le brinde las facilidades para facturar cada uno de los contratos de renta que firme con ella en el año fiscal vigente. & MB\tabularnewline
+\textit{RU7} &\textbf{Plantilla agentes de ventas} & El gerente de ventas requiere saber cuántos y cuáles son los agentes de ventas que están registrados en su plantilla de trabajo (de manera correcta y actualizada), así como sus datos personales (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico). & MA\tabularnewline
+\textit{RU8} &\textbf{Listas de ventas asignadas} & El gerente de ventas necesita saber (de manera correcta y actualizada) las ventas que ya han sido asignadas. & A\tabularnewline
+\textit{RU9} &\textbf{Lista de ventas pendientes} & El gerente de ventas necesita saber (de manera correcta y actualizada) las ventas que quedan por asignar &\tabularnewline
+\textit{RU10} &\textbf{Asignar ventas pendientes} & El gerente de ventas necesita asignar ventas pendientes a cada uno de los agentes de ventas. & A\tabularnewline
+\textit{RU11} &\textbf{Alta clientes gerencia} & El gerente de ventas requiere dar de alta los datos personales a un cliente (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico, rfc). & MA\tabularnewline
+\textit{RU12} &\textbf{Lista clientes} & El gerente de ventas necesita conocer cuántos y cuáles son los clientes han realizado transacciones en el pasado (hasta 1 año atrás) y/o en el presente con la empresa, y sus datos personales.  & MA\tabularnewline
+\textit{RU13} &\textbf{Cambios clientes gerencia} & El gerente de ventas requiere hacer cambios a los datos personales de un cliente. & MA\tabularnewline
+\textit{RU14} &\textbf{Eliminación cliente} & El gerente de ventas requiere la eliminación lógica de los datos personales de un cliente. & A\tabularnewline
+\textit{RU15} &\textbf{Eliminación agente de ventas} & El gerente de ventas requiere la eliminación lógica de los datos personales de un agente de ventas. & MA\tabularnewline
+\textit{RU16} &\textbf{Listado clientes sin agente de ventas} & El gerente de ventas necesita saber cuántos y cuáles son los clientes que tenían asignado un agente de ventas que se ha eliminado de la plantilla de trabajos y ya no, para atenderlos él mismo o asignarle un nuevo agente de ventas. & MA\tabularnewline
+\textit{RU17} &\textbf{Listado cientes por gerente ventas} & El agente de ventas necesita conocer cuántos y cuáles son los clientes han realizado transacciones en el pasado (hasta 1 año atrás) y/o en el presente con él, y sus datos personales. & A\tabularnewline
+\textit{RU18} &\textbf{Alta clientes agente} & El agente de ventas requiere dar de alta los datos personales a un cliente (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico, rfc). & A\tabularnewline
+\textit{RU19} &\textbf{Cambios clientes agente} & El agente de ventas requiere hacer cambios a los datos personales de un cliente. & A\tabularnewline
+\textit{RU20} &\textbf{Presupuestos agente} & El agente de ventas necesita realizar presupuestos para los distintos cliente que atiende de acuerdo a sus necesidades (grado de impacto, medidas, medio, vistas, ubicación, tipo y precio). & A\tabularnewline
+\textit{RU21} &\textbf{Presupuestos gerente} & El gerente de ventas necesita realizar presupuestos para los distintos cliente que atiende de acuerdo a sus necesidades (grado de impacto, medidas, medio, vistas, ubicación, tipo y precio). &\tabularnewline
+\textit{RU22} &\textbf{Confirmación presupuesto agente} & El agente de ventas requiere confirmar los presupuestos de los clientes que hayan aceptado éstos. & A\tabularnewline
+\textit{RU23} &\textbf{Confirmación presupuesto gerente} & El gerente de ventas requiere confirmar los presupuestos de los clientes que hayan aceptado éstos. & MA\tabularnewline
+\textit{RU24} &\textbf{Presupuestos pendientes gerente} & El gerente de ventas requiere conocer cuántos y cuáles son los presupuestos que se encuentran en plazo de tolerancia y a qué cliente pertenece. & MA\tabularnewline
+\textit{RU25} &\textbf{Presupuestos pendientes agente} & El agente de ventas requiere conocer cuántos y cuáles son los presupuestos que se encuentran en plazo de tolerancia y a qué cliente pertenece. & A\tabularnewline
+\textit{RU26} &\textbf{Cancelar presupuestos gerente} & El gerente de ventas requiere cancelar los presupuestos de los clientes que no hayan llegado a ningún acuerdo con éste después del plazo de tolerancia. & MA\tabularnewline
+\textit{RU27} &\textbf{Cancelar presupuestos agente} & El agente de ventas requiere cancelar los presupuestos de los clientes que no hayan llegado a ningún acuerdo con éste después del plazo de tolerancia. & A \tabularnewline
+=======
+\begin{longtable}[H]{m{1cm}m{3cm}m{10cm}m{1cm}}
+\toprule
+\centering \textbf{ID} & \centering  \textbf{Nombre} & \centering \textbf{Descripción} & \centering \textbf{PRI} \tabularnewline
+\midrule
+\textit{RU1} &\textbf{Visualización de detalles de arrendamiento} & El cliente requiere de la correcta visualización de los detalles (fecha de inicio del contrato de renta, fecha de término del contrato de renta, número de espectaculares, número de contrato de renta, precio pactado en el contrato de renta) de cada uno de los espectaculares  de los cuales firmó un contrato de arrendamiento con la empresa. (hasta 1 año atrás, y los que  tenga rentados en el momento de la petición). & B\tabularnewline
+\textit{RU2} &\textbf{Solicitud de renovación contrato} & El cliente requiere una solicitud de renovación del contrato de renta a la empresa. & MB\tabularnewline
+\textit{RU3} &\textbf{Solicitud presupuesto} & El cliente requiere solicitar un presupuesto de contrato de renta. & MB\tabularnewline
+\textit{RU4} &\textbf{Notificación renovación contrato} & El cliente debe ser notificado acerca de la respuesta a su solicitud de renovación del contrato de renta por la empresa al menos 3 días hábiles antes de  que inicie el nuevo período de renta. & MB\tabularnewline
+\textit{RU5} &\textbf{Notificación presupuesto} & El cliente necesita ser notificado acerca de la respuesta  a su solicitud de presupuesto de renta por la empresa como máximo 3 días hábiles después de que éste la elaboró. &\tabularnewline
+\textit{RU6} &\textbf{Facturación} & El cliente requiere facturar cada uno de los contratos de renta que firme con la empresa en el año fiscal vigente. & MB\tabularnewline
+\textit{RU7} &\textbf{Plantilla agentes de ventas} & El gerente de ventas requiere saber cuántos y cuáles son los agentes de ventas que están registrados en su plantilla de trabajo (de manera correcta y actualizada), así como sus datos personales (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico). & MA\tabularnewline
+\textit{RU8} &\textbf{Listas de ventas asignadas} & El gerente de ventas necesita saber (de manera correcta y actualizada) los clientes que ya han sido asignados a un agente de ventas. & A\tabularnewline
+\textit{RU9} &\textbf{Lista de ventas pendientes} & El gerente de ventas necesita saber (de manera correcta y actualizada) los cliente que quedan por asignar. &\tabularnewline
+\textit{RU10} &\textbf{Asignar ventas pendientes} & El gerente de ventas necesita asignar clientes pendientes a cada uno de los agentes de ventas. & A\tabularnewline
+\textit{RU11} &\textbf{Alta clientes gerencia} & El gerente de ventas requiere almacenar los datos personales a un cliente (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico, rfc). & MA\tabularnewline
+\textit{RU12} &\textbf{Lista clientes} & El gerente de ventas necesita conocer cuántos y cuáles son los clientes han realizado transacciones en el pasado (hasta 1 año atrás) y/o en el presente con la empresa, y sus datos personales.  & MA\tabularnewline
+\textit{RU13} &\textbf{Cambios clientes gerencia} & El gerente de ventas requiere actualizar a los datos personales de un cliente. & MA\tabularnewline
+\textit{RU14} &\textbf{Eliminación cliente} & El gerente de ventas necesita poder eliminar los datos personales de un cliente para evitar confusiones con los agentes de ventas. Sin embargo, requiere almacenar sus datos para cualquier aclaración. & A\tabularnewline
+\textit{RU15} &\textbf{Eliminación agente de ventas} & El gerente de ventas necesita eliminar los datos personales de un ex-agente de ventas para no considerarle para asignación de clientes. Sin embargo, requiere poder tener a la mano dichos datos para cualquier aclaración. & MA\tabularnewline
+\textit{RU16} &\textbf{Listado clientes sin agente de ventas} & El gerente de ventas necesita saber cuántos y cuáles son los clientes que tenían asignado un agente de ventas que se ha eliminado de la plantilla de trabajos, para atenderlos él mismo o asignarle un nuevo agente de ventas. & MA\tabularnewline
+\textit{RU17} &\textbf{Listado cientes por gerente ventas} & El agente de ventas necesita conocer cuántos y cuáles son los clientes han realizado transacciones en el pasado (hasta 1 año atrás) y/o en el presente con él, y sus datos personales. & A\tabularnewline
+\textit{RU18} &\textbf{Alta clientes agente} & El agente de ventas requiere anotar los datos personales a un cliente (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico, rfc). & A\tabularnewline
+\textit{RU19} &\textbf{Cambios clientes agente} & El agente de ventas necesita actualizar los datos personales de un cliente. & A\tabularnewline
+\textit{RU20} &\textbf{Presupuestos agente} & El agente de ventas necesita realizar presupuestos para los distintos clientes que atiende de acuerdo a sus necesidades (grado de impacto, medidas, medio, vistas, ubicación, tipo y precio). & A\tabularnewline
+\textit{RU21} &\textbf{Presupuestos gerente} & El gerente de ventas necesita realizar presupuestos para los distintos cliente que atiende de acuerdo a sus necesidades (grado de impacto, medidas, medio, vistas, ubicación, tipo y precio). &\tabularnewline
+\textit{RU22} &\textbf{Confirmación presupuesto agente} & El agente de ventas debe confirmar los presupuestos de los clientes que hayan aceptado éstos. & A\tabularnewline
+\textit{RU23} &\textbf{Confirmación presupuesto gerente} & El gerente de ventas debe confirmar los presupuestos de los clientes que hayan aceptado éstos. & MA\tabularnewline
+\textit{RU24} &\textbf{Presupuestos pendientes gerente} & El gerente de ventas requiere conocer cuántos y cuáles son los presupuestos que se encuentran en plazo de tolerancia y a qué cliente pertenece. & MA\tabularnewline
+\textit{RU25} &\textbf{Presupuestos pendientes agente} & El agente de ventas requiere conocer cuántos y cuáles son los presupuestos que se encuentran en plazo de tolerancia y a qué cliente pertenece. & A\tabularnewline
+\textit{RU26} &\textbf{Cancelar presupuestos gerente} & El gerente de ventas requiere cancelar los presupuestos de los clientes que no hayan llegado a ningún acuerdo con éste después del plazo de tolerancia. & MA\tabularnewline
+\textit{RU27} &\textbf{Cancelar presupuestos agente} & El agente de ventas debe cancelar los presupuestos de los clientes que no hayan llegado a ningún acuerdo con éste después del plazo de tolerancia. & A \tabularnewline
+>>>>>>> master
+\textit{RU28} &\textbf{Listado permisos SSP titular} & El titular de jurídico requiere saber cuántos y cuáles espectaculares tienen vigente el permiso de la SSP correspondiente y los datos asociados a este (número de permiso, período de vigencia del permiso y agente jurídico que tramitó el permiso) que están registrados en su plantilla de espectaculares (de manera correcta y actualizada). & MA\tabularnewline
+\textit{RU29} &\textbf{Listado permisos SPC titular} & El titular de jurídico requiere saber cuántos y cuáles espectaculares tienen vigente el permiso de SPC correspondiente y los datos asociados a este (número de permiso, período de  vigencia del permiso y agente jurídico que tramitó el permiso) que están registrados en su plantilla de espectaculares (de manera correcta y actualizada). & MA\tabularnewline
+\textit{RU30} &\textbf{Listado pólizas titular} & El titular de jurídico requiere saber cuántos y cuáles espectaculares tienen vigente la póliza de seguros correspondiente y los datos asociados a este (aseguradora, número de póliza, período de vigencia de la póliza, qué cubre la póliza y por cuánto, y agente jurídico que tramitó la póliza) que están registrados en su plantilla de espectaculares (de manera correcta y actualizada). & MA\tabularnewline
+\textit{RU31} &\textbf{Listado permisos SOBSE titular} & El titular de jurídico requiere saber cuántos y cuáles espectaculares tienen vigente el permiso de SOBSE correspondiente y los datos asociados a este (número de permiso, período de  vigencia del permiso y agente jurídico que tramitó el permiso) que están registrados en su plantilla de espectaculares (de manera correcta y actualizada). & MA\tabularnewline
+\textit{RU32} &\textbf{Alta permiso SSP titular} & El titular de jurídico requiere dar de alta un nuevo permiso de la SSP asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & MA\tabularnewline
+\textit{RU33} &\textbf{Alta permiso SPC titular} & El titular de jurídico requiere dar de alta un nuevo permiso de la SPC asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & MA\tabularnewline
+\textit{RU34} &\textbf{Alta póliza titular} & El titular de jurídico requiere dar de alta un nuevo permiso de la SPC asociado a un espectacular y sus respectivos datos (nombre de la aseguradora contratada, número de póliza, fecha de inicio de cobertura de la póliza, fecha de término de cobertura de la póliza, cobertura de la póliza, estado y agente jurídico que tramitó dicha póliza) & MA\tabularnewline
+\textit{RU35} &\textbf{Alta permiso SOBSE titular} & El titular de jurídico requiere dar de alta un nuevo permiso de la SOBSE asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & MA\tabularnewline
+<<<<<<< HEAD
+\textit{RU36} &\textbf{Cambios permiso SSP titular} & El titular de jurídico requiere hacer cambios en los datos de un permiso de la SSP asociado a un espectacular. & MA\tabularnewline
+\textit{RU37} &\textbf{Cambios permiso SPC titular} & El titular de jurídico requiere hacer cambios en los datos de un permiso de la SPC asociado a un espectacular. & MA\tabularnewline
+\textit{RU38} &\textbf{Cambios póliza titular} & El titular de jurídico requiere hacer cambios en los datos de una póliza asociado a un espectacular. & MA\tabularnewline
+\textit{RU39} &\textbf{Cambios permiso SOBSE titular} & El titular de jurídico requiere hacer cambios en los datos de un permiso de la SOBSE asociado a un espectacular. & MA\tabularnewline
+\textit{RU40} &\textbf{Eliminación permiso SSP} & El titular de jurídico requiere realizar la eliminación lógica de un permiso de la SSP asociado a un espectacular. & MA\tabularnewline
+\textit{RU41} &\textbf{Eliminación permiso SPC} & El titular de jurídico requiere realizar la eliminación lógica de un permiso de la SPC asociado a un espectacular. & MA\tabularnewline
+\textit{RU42} &\textbf{Eliminación póliza} & El titular de jurídico requiere realizar la eliminación lógica de una póliza asociado a un espectacular. & MA\tabularnewline
+\textit{RU43} &\textbf{Eliminación permiso SOBSE} & El titular de jurídico requiere realizar la eliminación lógica de un permiso de la SOBSE asociado a un espectacular. & MA\tabularnewline
+=======
+\textit{RU36} &\textbf{Cambios permiso SSP titular} & El titular de jurídico debe actualizar los datos de un permiso de la SSP asociado a un espectacular. & MA\tabularnewline
+\textit{RU37} &\textbf{Cambios permiso SPC titular} & El titular de jurídico debe actualizar en los datos de un permiso de la SPC asociado a un espectacular. & MA\tabularnewline
+\textit{RU38} &\textbf{Cambios póliza titular} & El titular de jurídico debe actualizar en los datos de una póliza asociado a un espectacular. & MA\tabularnewline
+\textit{RU39} &\textbf{Cambios permiso SOBSE titular} & El titular de jurídico debe actualizar en los datos de un permiso de la SOBSE asociado a un espectacular. & MA\tabularnewline
+\textit{RU40} &\textbf{Eliminación permiso SSP} & El titular de jurídico necesita eliminar la de un permiso vencido de la SSP asociado a un espectacular. Sin embargo, también requiere un registro de dicha información para aclaraciones. & MA\tabularnewline
+\textit{RU41} &\textbf{Eliminación permiso SPC} & El titular de jurídico necesita eliminar la de un permiso vencido de la SPC asociado a un espectacular. Sin embargo, también requiere un registro de dicha información para aclaraciones.. & MA\tabularnewline
+\textit{RU42} &\textbf{Eliminación póliza} & El titular de jurídico necesita eliminar una póliza de seguros vencida asociada a un espectacular. Sin embargo, también requiere un registro de dicha información para aclaraciones. & MA\tabularnewline
+\textit{RU43} &\textbf{Eliminación permiso SOBSE} & El titular de jurídico necesita eliminar la de un permiso vencido de la SOBSE asociado a un espectacular. Sin embargo, también requiere un registro de dicha información para aclaraciones. & MA\tabularnewline
+>>>>>>> master
+\textit{RU44} &\textbf{Listado permisos SSP agente} & El agente jurídico requiere saber cuántos y cuáles espectaculares tienen vigente el permiso de la SSP correspondiente y los datos asociados a este (número de permiso, período de vigencia del permiso y agente jurídico que tramitó el permiso) que están registrados en su plantilla de espectaculares (de manera correcta y actualizada). & A\tabularnewline
+\textit{RU45} &\textbf{Listado permisos SPC agente} & El agente jurídico requiere saber cuántos y cuáles espectaculares tienen vigente el permiso de SPC correspondiente y los datos asociados a este (número de permiso, período de  vigencia del permiso y agente jurídico que tramitó el permiso) que están registrados en su plantilla de espectaculares (de manera correcta y actualizada). & A\tabularnewline
+\textit{RU46} &\textbf{Listado pólizas agente} & El agente jurídico requiere saber cuántos y cuáles espectaculares tienen vigente la póliza de seguros correspondiente y los datos asociados a este (aseguradora, número de póliza, período de vigencia de la póliza, qué cubre la póliza y por cuánto, y agente jurídico que tramitó la póliza) que están registrados en su plantilla de espectaculares (de manera correcta y actualizada). & A\tabularnewline
+\textit{RU47} &\textbf{Listado permisos SOBSE agente} & El agente jurídico requiere saber cuántos y cuáles espectaculares tienen vigente el permiso de SOBSE correspondiente y los datos asociados a este (número de permiso, período de  vigencia del permiso y agente jurídico que tramitó el permiso) que están registrados en su plantilla de espectaculares (de manera correcta y actualizada). & A\tabularnewline
+<<<<<<< HEAD
+\textit{RU48} &\textbf{Alta permiso SSP agente} & El agente jurídico requiere dar de alta un nuevo permiso de la SSP asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & A\tabularnewline
+\textit{RU49} &\textbf{Alta permiso SPC agente} & El agente jurídico requiere dar de alta un nuevo permiso de la SPC asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & A\tabularnewline
+\textit{RU50} &\textbf{Alta póliza agente} & El agente jurídico requiere dar de alta un nuevo permiso de la SPC asociado a un espectacular y sus respectivos datos (nombre de la aseguradora contratada, número de póliza, fecha de inicio de cobertura de la póliza, fecha de término de cobertura de la póliza, cobertura de la póliza, estado y agente jurídico que tramitó dicha póliza) & A\tabularnewline
+\textit{RU51} &\textbf{Alta permiso SOBSE agente} & El agentejurídico requiere dar de alta un nuevo permiso de la SOBSE asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & A\tabularnewline
+\textit{RU52} &\textbf{Cambios permiso SSP agente} & El agente jurídico requiere hacer cambios en los datos de un permiso de la SSP asociado a un espectacular. & A\tabularnewline
+\textit{RU53} &\textbf{Cambios permiso SPC agente} & El agente jurídico requiere hacer cambios en los datos de un permiso de la SPC asociado a un espectacular. & A\tabularnewline
+\textit{RU54} &\textbf{Cambios póliza agente} & El agente jurídico requiere hacer cambios en los datos de una póliza asociado a un espectacular. & A\tabularnewline
+\textit{RU55} &\textbf{Cambios permiso SOBSE agente} & El agentejurídico requiere hacer cambios en los datos de un permiso de la SOBSE asociado a un espectacular. & A
+\tabularnewline
+\textit{RU56} & \textbf{Listado plantilla empleados} & El jefe de capital humano requiere saber cuántos y cuáles son los empleados registrados en la plantilla de la empresa (de todos los departamentos) así como sus datos personales (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico, departamento al que pertenece, puesto). & MA\tabularnewline
+\textit{RU57} & \textbf{Alta nuevo empleado titular} & El jefe de capital humano requiere dar de alta un nuevo empleado en la plantilla de la empresa (de cualesquiera que sea su departamento y/o cargo), ingresando sus datos personales (nombre completo, dirección, teléfono fijo, teléfono celular, dirección de correo electrónico, situación, departamento y tipo de empleado.\ & MA\tabularnewline
+\textit{RU58} & \textbf{Cambio empleado titular} & El jefe de capital humano requiere modificar los datos asociados a un empleado registrado en la plantilla. & MA\tabularnewline
+\textit{RU59} & \textbf{Eliminación empleado} & El jefe de capital humano requiere realizar la eliminación lógica de los datos de un empleado de la plantilla. & MA \tabularnewline
+\textit{RU60} & \textbf{Copia listado plantilla empleados} & El agente de capital humano requiere saber cuántos y cuáles son los empleados registrados en la plantilla de la empresa (de todos los departamentos) así como sus datos personales (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico, departamento al que pertenece, puesto). & A\tabularnewline
+\textit{RU61} & \textbf{Alta nuevo empleado agente} & El agente de capital humano requiere dar de alta un nuevo empleado en la plantilla de la empresa (de cualesquiera que sea su departamento y/o cargo), ingresando sus datos personales (nombre completo, dirección, teléfono fijo, teléfono celular, dirección de correo electrónico, situación, departamento y tipo de empleado.\ & A\tabularnewline
+\textit{RU62} & \textbf{Cambio empleado agente} & El agente de capital humano requiere modificar los datos asociados a un empleado registrado en la plantilla. & A\tabularnewline
+\textit{RU63} & \textbf{Alta espectacular jefe} & El jefe de infraestructura necesita poder dar de alta un nuevo espectacular en la plantilla y sus datos asociados (ubicación en coordenadas, dirección de la ubicación, estado, fecha de inicio de contrato de arrendamiento, fecha de término de contrato de arrendamiento, categoría del espectacular, impacto promedio, medio, vistas, iluminación y medidas). & MA\tabularnewline
+\textit{RU64} & \textbf{Listado espectaculares jefe} & El jefe de infraestructura requiere saber cuántos y cuáles son los espectaculares que están registrados (de manera correcta y actualizada), así como sus datos asociados. & MA\tabularnewline
+\textit{RU65} & \textbf{Cambio espectacular jefe} & El jefe de infraestructura requiere realizar cambios en los datos asociados a un espectacular. & MA\tabularnewline
+\textit{RU66} & \textbf{Eliminación espectacular} & El jefe de infraestructura necesita realizar la eliminación lógica de los datos de un espectacular. & MA\tabularnewline
+=======
+\textit{RU48} &\textbf{Alta permiso SSP agente} & El agente jurídico necesita almacenar la información correspondiente a un nuevo permiso de la SSP asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & A\tabularnewline
+\textit{RU49} &\textbf{Alta permiso SPC agente} & El agente jurídico necesita almacenar la información correspondiente a un nuevo permiso de la SPC asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & A\tabularnewline
+\textit{RU50} &\textbf{Alta póliza agente} & El agente jurídico requiere necesita almacenar la información correspondiente a un nuevo permiso de la SPC asociado a un espectacular y sus respectivos datos (nombre de la aseguradora contratada, número de póliza, fecha de inicio de cobertura de la póliza, fecha de término de cobertura de la póliza, cobertura de la póliza, estado y agente jurídico que tramitó dicha póliza) & A\tabularnewline
+\textit{RU51} &\textbf{Alta permiso SOBSE agente} & El agente jurídico necesita almacenar la información correspondiente a un nuevo permiso de la SOBSE asociado a un espectacular y sus respectivos datos (número de permiso (número de permiso, fecha de inicio de cobertura del permiso , fecha de término de cobertura del permiso, estado y agente jurídico que tramitó dicho permiso) & A\tabularnewline
+\textit{RU52} &\textbf{Cambios permiso SSP agente} & El agente jurídico requiere actualizar los datos de un permiso de la SSP asociado a un espectacular. & A\tabularnewline
+\textit{RU53} &\textbf{Cambios permiso SPC agente} & El agente jurídico requiere actualizar en los datos de un permiso de la SPC asociado a un espectacular. & A\tabularnewline
+\textit{RU54} &\textbf{Cambios póliza agente} & El agente jurídico requiere hacer actualizar en los datos de una póliza asociado a un espectacular. & A\tabularnewline
+\textit{RU55} &\textbf{Cambios permiso SOBSE agente} & El agentejurídico requiere actualizar en los datos de un permiso de la SOBSE asociado a un espectacular. & A
+\tabularnewline
+\textit{RU56} & \textbf{Listado plantilla empleados} & El jefe de capital humano requiere saber cuántos y cuáles son los empleados registrados en la plantilla de la empresa (de todos los departamentos) así como sus datos personales (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico, departamento al que pertenece, puesto). & MA\tabularnewline
+\textit{RU57} & \textbf{Alta nuevo empleado titular} & El jefe de capital humano requiere registrar los datos de un nuevo empleado en la plantilla de la empresa (de cualesquiera que sea su departamento y/o cargo), ingresando sus datos personales (nombre completo, dirección, teléfono fijo, teléfono celular, dirección de correo electrónico, situación, departamento y tipo de empleado.\ & MA\tabularnewline
+\textit{RU58} & \textbf{Cambio empleado titular} & El jefe de capital humano requiere modificar los datos asociados a un empleado registrado en la plantilla. & MA\tabularnewline
+\textit{RU59} & \textbf{Eliminación empleado} & El jefe de capital humano requiere realizar la eliminación lógica de los datos de un empleado de la plantilla. & MA \tabularnewline
+\textit{RU60} & \textbf{Copia listado plantilla empleados} & El agente de capital humano requiere saber cuántos y cuáles son los empleados registrados en la plantilla de la empresa (de todos los departamentos) así como sus datos personales (nombre completo, teléfono fijo, teléfono celular, dirección, correo electrónico, departamento al que pertenece, puesto). & A\tabularnewline
+\textit{RU61} & \textbf{Alta nuevo empleado agente} & El agente de capital humano requiere almacenar los datos de un nuevo empleado en la plantilla de la empresa (de cualesquiera que sea su departamento y/o cargo), ingresando sus datos personales (nombre completo, dirección, teléfono fijo, teléfono celular, dirección de correo electrónico, situación, departamento y tipo de empleado.\ & A\tabularnewline
+\textit{RU62} & \textbf{Cambio empleado agente} & El agente de capital humano requiere modificar los datos asociados a un empleado registrado en la plantilla. & A\tabularnewline
+\textit{RU63} & \textbf{Alta espectacular jefe} & El jefe de infraestructura necesita almacenar los datos de un nuevo espectacular en la plantilla y sus datos asociados (ubicación en coordenadas, dirección de la ubicación, estado, fecha de inicio de contrato de arrendamiento, fecha de término de contrato de arrendamiento, categoría del espectacular, impacto promedio, medio, vistas, iluminación y medidas). & MA\tabularnewline
+\textit{RU64} & \textbf{Listado espectaculares jefe} & El jefe de infraestructura requiere saber cuántos y cuáles son los espectaculares que están registrados (de manera correcta y actualizada), así como sus datos asociados. & MA\tabularnewline
+\textit{RU65} & \textbf{Cambio espectacular jefe} & El jefe de infraestructura requiere realizar cambios en los datos asociados a un espectacular. & MA\tabularnewline
+\textit{RU66} & \textbf{Eliminación espectacular} & El jefe de infraestructura debe eliminar los datos de un espectacular para que éste no sea tomado en cuenta para futuras ventas. Sin embargo, requiere tener un registro de estos datos para aclaraciones futuras. & MA\tabularnewline
+>>>>>>> master
+\textit{RU67} & \textbf{Estado mantenimiento} & El jefe de infraestructura requiere ser notificado del estado de mantenimiento de cada espectacular registrado en la plantilla de la empresa antes de que éste requiera mantenimiento preventivo (3 días antes mínimo), o mantenimiento correctivo (en el momento exacto). & A\tabularnewline
+\textit{RU68} & \textbf{Miembros cuadrilla jefe} & El jefe de infraestructura necesita conocer cuántos y cuáles agentes de infraestructura pertenecen a una cuadrilla de mantenimiento específica. & M\tabularnewline
+\textit{RU69} & \textbf{Ubicación cuadrilla} & El jefe de infraestructura necesita conocer la ubicación en tiempo real de una cuadrilla. & M \tabularnewline
+\textit{RU70} & \textbf{Asignar servicio} & El jefe de infraestructura necesita asignar a una cuadrilla un servicio de estimación de daños, mantenimiento, instalación o desmontaje dependiendo de su ubicación en tiempo real. & A\tabularnewline
+\textit{RU71} & \textbf{Servicio realizado jefe} & El jefe de infraestructura necesita saber en tiempo real si un servicio de mantenimiento, estimación de daños, instalación o desmontaje ha sido realizado por la cuadrilla asignada. & A\tabularnewline
+\textit{RU72} & \textbf{Alta espectacular jefe} & El jefe de infraestructura necesita poder dar de alta un nuevo espectacular en la plantilla y sus datos asociados (ubicación en coordenadas, dirección de la ubicación, estado, fecha de inicio de contrato de arrendamiento, fecha de término de contrato de arrendamiento, categoría del espectacular, impacto promedio, medio, vistas, iluminación y medidas). & MA\tabularnewline
+\textit{RU73} & \textbf{Listado espectaculares líder} & El líder de cuadrilla requiere saber cuántos y cuáles son los espectaculares que están registrados (de manera correcta y actualizada), así como sus datos asociados. & A\tabularnewline
+\textit{RU74} & \textbf{Cambio espectacular líder} & El líder de cuadrilla requiere realizar cambios en los datos asociados a un espectacular. & A\tabularnewline
+\textit{RU75} & \textbf{Miembros cuadrilla líder} & El líder de una cuadrilla necesita conocer cuántos y cuáles agentes de infraestructura pertenecen a su cuadrilla. & M\tabularnewline
+\textit{RU76} & \textbf{Servicio realizado líder} & El líder de cuadrilla necesita notificar en tiempo real si un servicio de mantenimiento, estimación de daños, instalación o desmontaje ha sido realizado por su cuadrilla & A\tabularnewline
+\textit{RU77} & \textbf{Notificación siniestro jurídico} & El titular de jurídico requiere ser notificado en el momento exacto en que el jefe de infraestructura sea avisado de que ocurrió un siniestro en un espectacular. & MA\tabularnewline
+\textit{RU78} & \textbf{Asignación siniestro jurídico} & El titular jurídico requiere notificar al agente jurídico encargado del trámite de los permisos y la póliza del espectacular que ha sufrido un siniestro. & MA\tabularnewline
+\textit{RU79} & \textbf{Notificación siniestro agente jurídico} & El agente jurídico encargado de los permisos y la póliza del espectacular que ha sufrido un percance debe ser notificado para acudir al lugar de los hechos. & A\tabularnewline
+<<<<<<< HEAD
+\textit{RU80} & \textbf{Alta espectacular líder} & El líder de cuadrilla necesita poder dar de alta un nuevo espectacular en la plantilla y sus datos asociados. & A\tabularnewline
+\textit{RU81} & \textbf{Lista espectaculares ventas gerente} & El gerente de ventas necesita visualizar lista de espectaculares con los que cuenta la empresa para poder considerarlo en un presupuesto o contrato de arrendamiento. & A\tabularnewline
+\textit{RU82} & \textbf{Lista espectaculares ventas agente} & El agente de ventas necesita visualizar lista de espectaculares con los que cuenta la empresa para poder considerarlo en un presupuesto o contrato de arrendamiento. & A\tabularnewline
+=======
+\textit{RU80} & \textbf{Alta espectacular líder} & El líder de cuadrilla necesita poder almacenar los datos de un nuevo espectacular en la plantilla y sus datos asociados. & A\tabularnewline
+\textit{RU81} & \textbf{Lista espectaculares ventas gerente} & El gerente de ventas necesita conocer lista de espectaculares con los que cuenta la empresa para poder considerarlo en un presupuesto o contrato de arrendamiento. & A\tabularnewline
+\textit{RU82} & \textbf{Lista espectaculares ventas agente} & El agente de ventas necesita conocer la lista de espectaculares con los que cuenta la empresa para poder considerarlo en un presupuesto o contrato de arrendamiento. & A\tabularnewline
+>>>>>>> master
+\textit{RU83} & \textbf{Generación de reporte de ventas} & El gerente de ventas requiere realizar un reporte de las ventas concretadas durante el mes en curso. & A\tabularnewline
+\textit{RU84} & \textbf{Generación de reporte de clientes} & El gerente de ventas requiere realizar un reporte de las clientes que han actualizado sus datos en el mes en curso. & A\tabularnewline
+\textit{RU85} & \textbf{Generación de reporte de empleados} & El jefe de capital humano requiere realizar un reporte de las actividades realizadas por cada empleado durante el mes para pago de bonos de productividad. & A\tabularnewline
+\textit{RU86} & \textbf{Generación de reporte de siniestros} & El jefe de infraestructura requiere realizar un reporte de los siniestros ocurridos durante el mes en curso. & A\tabularnewline
+<<<<<<< HEAD
+\caption{Requerimientos de usuario}
+\label{tbl:listaRU}
+\bottomrule
+=======
+\bottomrule
+\caption{Requerimientos de usuario}
+\label{tbl:listaRU}
+
+>>>>>>> master
+\end{longtable}
