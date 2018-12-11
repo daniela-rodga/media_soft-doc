@@ -2,19 +2,11 @@
 \chapter{Modelo dinámico}	
 \label{cap:modDinamico}
 
-	Este capítulo describe el modelo dinámico del sistema, en él se detallan todos los escenarios de ejecución del sistema. La figura~\ref{fig:casosDeUso} muestra el diagrama general del sistema y sus subsistemas y la figura~\ref{fig:casosDeUsoDetalle} muestra todos los casos de uso del sistema. En este documento solo detallamos los casos de uso del subsistema de departamento de capital humano y departamento de infraestructura.
+	Este capítulo describe el modelo dinámico del sistema, en él se detallan todos los escenarios de ejecución del sistema. La figura~\ref{fig:casosDeUso} muestra el diagrama general del sistema y sus subsistemas y la figura~\ref{fig:casosDeUsoDetalle} muestra todos los casos de uso del sistema. 
 	
 \begin{figure}[htbp]
 	\begin{center}
-		\fbox{\includegraphics[width=.8\textwidth]{images/casosDeUso}}
-		\caption{Diagrama de casos de uso del sistema.}
-		\label{fig:casosDeUso}
-	\end{center}
-\end{figure}
-
-\begin{figure}[htbp]
-	\begin{center}
-		\includegraphics[angle=90, width=.7\textwidth]{images/casosDeUsoDetalle}
+		\includegraphics[angle=90,width=.7\textwidth]{images/casosDeUsoDetalle}
 		\caption{Diagrama detallado del sistema.}
 		\label{fig:casosDeUsoDetalle}
 	\end{center}
@@ -26,21 +18,106 @@
 \section{Descripción de actores}
 
 %---------------------------------------------------------
-\begin{Usuario}{\hypertarget{getenteOperaciones}{\subsection{Gerente de Operaciones}}}{
-	Es el encargado de todas las operaciones de la empresa y está por encima de los ejecutivos de producción y de ventas principalmente.
+\begin{Usuario}{\hypertarget{gerenteVentas}{\subsection{Gerente de Ventas}}}{
+	Es el encargado del departamento de Ventas. Gestiona la cartera de clientes de la empresa y a los agentes de ventas.
 }
     \item[Responsabilidades:] \cdtEmpty
     \begin{itemize}
-		\item Supervisar la operación.
-		\item Plantear y supervisar el logro de las metas de la empresa y su crecimiento económico.
-		\item ...
+		\item Supervisar las ventas.
+		\item Plantear y supervisar el logro de las metas de ventas de la empresa.
+		\item Supervisar a los agentes de ventas.
+		\item Enlazar a los clientes con agentes de ventas de acuerdo a sus necesidades.
     \end{itemize}
 
 	\item[Perfil:] \cdtEmpty
     \begin{itemize}
 		\item Amplia experiencia en el ramo.
 		\item Licenciatura como mínimo.
-		\item ...
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{agenteVentas}{\subsection{Agente de Ventas}}}{
+	Se encarga de atender a los clientes y concretar las ventas.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Realizar presupuestos a la medida de las necesidades del cliente.
+		\item Asegurar el concretamiento de las ventas (mediante descuentos, promociones, etc.).
+		\item Mantener actualizada su lista de clientes.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Amplia experiencia en el ramo.
+		\item Preparatoria como mínimo.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{titularJuridico}{\subsection{Titular de Jurídico}}{
+	Es el encargado del departamento Jurídico. Gestiona los permisos y pólizas de seguro y las operaciones con estos.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Supervisar a los agentes jurídicos.
+		\item Asignar a un agente jurídico los permisos y/o pólizas que le corresponden según la zona en la que se encuentra el espectacular a registrarse.
+		\item Vigilar las vigencias de los permisos y pólizas asociadas a los espectaculares de la empresa.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Amplia experiencia en el ramo.
+		\item Licenciatura como mínimo.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{agenteJuridico}{\subsection{Agente Jurídico}}{
+	Se encarga de obtener y mantener actualizados los permisos y pólizas asociados a espectaculares asignados a él.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Dar de alta los permisos en las secretarías correspondientes (SSP, SOBSE,SPO).
+		\item Renovar o tramitar una póliza de seguros que cubra las necesidades del espectacular según la zona.
+		\item Vigilar las vigencias de los permisos y pólizas asociadas a los espectaculares asignados a él.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Amplia experiencia en el ramo.
+		\item Preparatoria como mínimo.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{jefeInfraestructura}{\subsection{Jefe de Infraestructura}}{
+	Es el encargado del departamento de Infraestructura. Gestiona el montaje, desmontaje y mantenimiento de los espectaculares.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Supervisar a las cuadrillas.
+		\item Asignar a cada cuadrilla el montaje o desmontaje o mantenimiento de un espectacular según sea el caso.
+		\item Vigilar el cumplimiento de mantenimiento de los espectaculares.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Amplia experiencia en el ramo.
+		\item Preparatoria como mínimo.
+    \end{itemize}
+\end{Usuario}
+
+\begin{Usuario}{\hypertarget{agenteInfra}{\subsection{Agente de Infraestructura}}{
+	Se encarga de las operaciones manuales refentes a los espectaculares asignados a su cuadrilla.
+}
+    \item[Responsabilidades:] \cdtEmpty
+    \begin{itemize}
+		\item Instalación del espectacular.
+		\item Mantenimiento preventivo y correctivo al espectacular.
+		\item Desmontaje del espectacular.
+    \end{itemize}
+
+	\item[Perfil:] \cdtEmpty
+    \begin{itemize}
+		\item Amplia experiencia en el ramo.
+		\item Preparatoria como mínimo.
     \end{itemize}
 \end{Usuario}
 >>>>>>> master
@@ -54,7 +131,7 @@ A continuación se detallan los casos de uso.
 <<<<<<< HEAD
 =======
 \input{cu/cu01}
-%\input{cu/cu03}
+\input{cu/cu03}
 >>>>>>> master
 \input{cu/cu14}
 \input{cu/cu15}
