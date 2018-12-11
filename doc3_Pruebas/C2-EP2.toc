@@ -1,22 +1,23 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {7}Introducci\IeC {\'o}n}{1}{chapter.7}
-\contentsline {section}{\numberline {7.1}Presentaci\IeC {\'o}n}{1}{section.7.1}
-\contentsline {section}{\numberline {7.2}Organizaci\IeC {\'o}n del contenido}{1}{section.7.2}
-\contentsline {section}{\numberline {7.3}Notaci\IeC {\'o}n, s\IeC {\'\i }mbolos y convenciones utilizadas}{1}{section.7.3}
-\contentsline {chapter}{\numberline {8}Dise\IeC {\~n}o Arquitect\IeC {\'o}nico}{3}{chapter.8}
-\contentsline {section}{\numberline {8.1}Entorno de Producci\IeC {\'o}n}{3}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Organigrama de la Empresa}{3}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Gerente de Ventas}{3}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}Agente de Ventas}{4}{subsection.8.1.3}
-\contentsline {section}{\numberline {8.2}Entorno de Desarrollo}{4}{section.8.2}
-\contentsline {section}{\numberline {8.3}Lanzamientos de Dise\IeC {\~n}o}{4}{section.8.3}
-\contentsline {chapter}{\numberline {9}Modelo Din\IeC {\'a}mico}{7}{chapter.9}
-\contentsline {section}{\numberline {9.1}Diagramas de Estado}{7}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Gerente de Operaciones}{9}{subsection.9.1.1}
-\contentsline {section}{\numberline {9.2}Diagramas de Secuencia}{9}{section.9.2}
-\contentsline {subsection}{\numberline {9.2.1}Diagrama de Secuencai de CU-01}{9}{subsection.9.2.1}
-\contentsline {section}{\numberline {9.3}CU17 Inscribir a Seminario}{10}{section.9.3}
-\contentsline {subsection}{\numberline {9.3.1}Descripci\IeC {\'o}n completa}{10}{subsection.9.3.1}
-\contentsline {subsection}{\numberline {9.3.2}Atributos importantes}{10}{subsection.9.3.2}
-\contentsline {subsection}{\numberline {9.3.3}Trayectorias del Caso de Uso}{10}{subsection.9.3.3}
-\contentsline {subsection}{\numberline {9.3.4}Puntos de extensi\IeC {\'o}n}{12}{subsection.9.3.4}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Presentaci\IeC {\'o}n}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Organizaci\IeC {\'o}n del contenido}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Notaci\IeC {\'o}n, s\IeC {\'\i }mbolos y convenciones utilizadas}{1}{section.1.3}
+\contentsline {chapter}{\numberline {2}Plan de Pruebas}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Objetivo de las Pruebas}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Organigrama de la Empresa}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Gerente de Ventas}{3}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Agente de Ventas}{4}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Alcance de las Pruebas}{5}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Base de Pruebas}{5}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Enfoque de Pruebas}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Tiempo de Pruebas}{5}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Criterio de Salida}{5}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Pruebas a Realizar}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Tipos de Pruebas}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Niveles de Pruebas}{6}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Estrategias de Pruebas}{6}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Pruebas de Regresi\IeC {\'o}n}{6}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Pruebas de Recarga}{6}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}Pruebas de Estr\IeC {\'e}s}{6}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Proceso de Pruebas}{6}{section.2.4}
